@@ -10,7 +10,7 @@ class Inicio extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("BLINDAR SECURITY SAS"),
-        backgroundColor: const Color(0xFF65E008),
+        backgroundColor: Color.fromARGB(255, 77, 190, 43),
         actions: [
           IconButton(
               iconSize: 30,
@@ -56,7 +56,7 @@ class Inicio extends StatelessWidget {
       //color: Colors.transparent,
       child: ListTile(
         //textColor: Colors.white,
-        tileColor: Colors.indigo.shade100,
+        tileColor: Color.fromARGB(255, 77, 190, 43),
         leading: const Icon(Icons.home),
         title: const Text('SERVICIOS NO PROGRAMADOS'),
         //subtitle: const Text('Visitas a contratos'),
@@ -83,7 +83,7 @@ class Inicio extends StatelessWidget {
   Card _card2() {
     return Card(
       child: ListTile(
-        tileColor: Colors.indigo.shade100,
+        tileColor: Color.fromARGB(255, 77, 190, 43),
         leading: Icon(Icons.calendar_month_outlined),
         title: Text('SERVICIOS PROGRAMADOS'),
         //subtitle: Text('Agenda programada')
@@ -105,7 +105,7 @@ class Inicio extends StatelessWidget {
   Card _card4() {
     return Card(
       child: ListTile(
-        tileColor: Colors.indigo.shade100,
+        tileColor: Color.fromARGB(255, 77, 190, 43),
         leading: Icon(Icons.sync_sharp),
         title: Text('SINCRONIZAR'),
         //subtitle: Text('Sincronismo')

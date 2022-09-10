@@ -20,6 +20,7 @@ class MenuCliente extends StatelessWidget {
       key: _scaffekey,
       appBar: AppBar(
         title: const Text("CLIENTE"),
+        backgroundColor: Color.fromARGB(255, 77, 190, 43),
         actions: [
           IconButton(
               iconSize: 30,
@@ -69,7 +70,7 @@ class MenuCliente extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               ListTile(
-                tileColor: Colors.indigo.shade200,
+                tileColor: Color.fromARGB(255, 77, 190, 43),
                 title: const Text('OPCIONES'),
               ),
               ListTile(
@@ -103,7 +104,7 @@ class MenuCliente extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               ListTile(
-                tileColor: Colors.indigo.shade200,
+                tileColor: Color.fromARGB(255, 77, 190, 43),
                 title: const Text('FORMULARIOS'),
               ),
               ListTile(
@@ -132,7 +133,7 @@ class MenuCliente extends StatelessWidget {
               ListTile(
                 tileColor: Colors.indigo.shade100,
                 trailing: const Icon(Icons.arrow_forward_ios),
-                title: const Text('MANTENIMIANTO PREVENTIVO'),
+                title: const Text('MANTENIMIENTO PREVENTIVO'),
                 onTap: () => Navigator.push(
                     context,
                     MaterialPageRoute(

@@ -24,6 +24,7 @@ class Login extends StatelessWidget {
         primarySwatch: Colors.grey,
       ),
       home: SplashScreen(title: 'Flutter Login'),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

@@ -12,6 +12,7 @@ class ServicioTecnico extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("SERVICIO TÉCNICO"),
+        backgroundColor: Color.fromARGB(255, 77, 190, 43),
         actions: [
           IconButton(
               iconSize: 30,
@@ -58,7 +59,7 @@ class EditableTextState extends State<EstiloFormulario> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'SERVICIO TECNICO'
+                'SERVICIO TÉCNICO'
                 ),
               const Divider(),
               Text(
@@ -94,9 +95,12 @@ class EditableTextState extends State<EstiloFormulario> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 16.0),
             child: ElevatedButton(
-              onPressed: () {
+              child: const Text('Foto'),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Color.fromARGB(255, 77, 190, 43)),
+              ),
+               onPressed: () {
               },
-              child: const Text('Adicionar'),
             ),
           ),
 
@@ -232,6 +236,9 @@ class EditableTextState extends State<EstiloFormulario> {
               onPressed: () {
               },
               child: const Text('Adicionar'),
+               style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Color.fromARGB(255, 77, 190, 43)),
+              ),
             ),
           ),
 
@@ -281,29 +288,32 @@ class EditableTextState extends State<EstiloFormulario> {
             
             child: Stack(
               children: [
-                Align(
-                  alignment: Alignment(-1,0),
-                  child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
+                Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 30.0),
+                child: ElevatedButton(
+                child: const Text('Firmar'),
+                style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Color.fromARGB(255, 77, 190, 43)),
+              ),
+              onPressed: () {
+                Navigator.push(context,
                     MaterialPageRoute(builder: (context) => Firma()));
-                  },
-                  child: const Text('Firmar'),
-                  
-
-
-
-
+               },
+              
             ),
-                ),
-                Align(
-                  alignment: Alignment(0,2),
-                  child: ElevatedButton(
-                    onPressed: (){
-                      },
-                      child: const Text('Tomar Foto')
-                  )
-                )
+          ),
+                Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 170.0),
+                child: ElevatedButton(
+                child: const Text('Foto'),
+                style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Color.fromARGB(255, 77, 190, 43)),
+              ),
+              onPressed: () {
+               },
+              
+            ),
+          ),
               ],
             )
           ),
@@ -375,23 +385,20 @@ class EditableTextState extends State<EstiloFormulario> {
           const Divider(),
           Container(
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Align(
                   alignment: Alignment(-1,0),
-                  child: Text('CÉDULA O IDENTIFICACION \nDE QUIEN RECIBE: *')
+                  child: Text('CÉDULA O IDENTIFICACION DE QUIEN RECIBE: *')
                 ),
-                Align(
-                  alignment: Alignment.topRight,
-                  child: Text('FIRMA DE QUIEN RECIBE: *')
-                )
+                
               ],
             )
           ),
 
           Container(
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
               SizedBox(
                 height: 30,
@@ -411,19 +418,45 @@ class EditableTextState extends State<EstiloFormulario> {
                   },
                 ),
               ),
-              Align(
-                  alignment: Alignment(0,0),
-                  child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Firma()));
-                  },
-                  child: const Text('Firmar'),
-            ),
-                ),                
+                              
             ],
             )
           ),
+
+          const Divider(),
+          Container(
+            child: Stack(
+              children: [
+                Align(
+                  alignment: Alignment(0,0),
+                  child: Text('FIRMA DE QUIEN RECIBE: *'),
+                ),
+                
+              ],
+            )
+          ),
+          Container(
+            
+            child: Stack(
+              children: [
+                Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 170.0),
+                child: ElevatedButton(
+                child: const Text('Firmar'),
+                style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Color.fromARGB(255, 77, 190, 43)),
+              ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Firma()));
+               },
+              
+            ),
+          ),
+              ],
+            )
+          ),
+
           const Divider(),
           const Text('COPIA INFORME TÉCNICO: *'),
           Row(
