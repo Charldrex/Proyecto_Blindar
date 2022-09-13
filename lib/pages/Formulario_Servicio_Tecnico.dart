@@ -40,7 +40,13 @@ class EstiloFormulario extends StatefulWidget {
 }
 
 class EditableTextState extends State<EstiloFormulario> {
-  String? gender;
+  String? op1;
+  String? op2;
+  String? op3;
+  String? op4;
+  String? op5;
+
+
   final _formKey = GlobalKey<FormState>();
   
 
@@ -113,13 +119,14 @@ class EditableTextState extends State<EstiloFormulario> {
                 child: ListTile(
                   title: const Text("Si"),
                   leading: Radio(
-                      value: "male",
-                      groupValue: gender,
-                      onChanged: (value) {
-                        setState(() {
-                          gender = value.toString();
-                        });
-                      }),
+                  groupValue: op1,
+                  fillColor: MaterialStateColor.resolveWith((states) => Colors.green),
+                  onChanged: (String? value){
+                  setState(() {
+                  op1 = value;
+                 });
+                }, 
+                 value: 'Suministrados1'),
                 ),
               ),
               SizedBox(
@@ -127,13 +134,14 @@ class EditableTextState extends State<EstiloFormulario> {
                 child: ListTile(
                   title: const Text("No"),
                   leading: Radio(
-                     value: "female",
-                      groupValue: gender,
-                      onChanged: (value) {
-                        setState(() {
-                          gender = value.toString();
-                        });
-                      }),
+                  groupValue: op1,
+                  fillColor: MaterialStateColor.resolveWith((states) => Colors.green),
+                  onChanged: (String? value){
+                  setState(() {
+                  op1 = value;
+                 });
+                }, 
+                 value: 'Suministrados2'),
                 ),
               ),  
             ],
@@ -174,13 +182,14 @@ class EditableTextState extends State<EstiloFormulario> {
                 child: ListTile(
                   title: const Text("Si"),
                   leading: Radio(
-                      value: "male1",
-                      groupValue: gender,
-                      onChanged: (value) {
-                        setState(() {
-                          gender = value.toString();
-                        });
-                      }),
+                  groupValue: op2,
+                  fillColor: MaterialStateColor.resolveWith((states) => Colors.green),
+                  onChanged: (String? value){
+                  setState(() {
+                  op2 = value;
+                 });
+                }, 
+                 value: 'Retirados1'),
                 ),
               ),
               SizedBox(
@@ -188,13 +197,14 @@ class EditableTextState extends State<EstiloFormulario> {
                 child: ListTile(
                   title: const Text("No"),
                   leading: Radio(
-                      value: "female1",
-                      groupValue: gender,
-                      onChanged: (value) {
-                        setState(() {
-                          gender = value.toString();
-                        });
-                      }),
+                  groupValue: op2,
+                  fillColor: MaterialStateColor.resolveWith((states) => Colors.green),
+                  onChanged: (String? value){
+                  setState(() {
+                  op2 = value;
+                 });
+                }, 
+                 value: 'Retirados2'),
                 ),
               ),  
             ],
@@ -467,13 +477,14 @@ class EditableTextState extends State<EstiloFormulario> {
                 child: ListTile(
                   title: const Text("Si"),
                   leading: Radio(
-                      value: "male2",
-                      groupValue: gender,
-                      onChanged: (value) {
-                        setState(() {
-                          gender = value.toString();
-                        });
-                      }),
+                  groupValue: op3,
+                  fillColor: MaterialStateColor.resolveWith((states) => Colors.green),
+                  onChanged: (String? value){
+                  setState(() {
+                  op3 = value;
+                 });
+                }, 
+                 value: 'Informe1'),
                 ),
               ),
               SizedBox(
@@ -481,13 +492,14 @@ class EditableTextState extends State<EstiloFormulario> {
                 child: ListTile(
                   title: const Text("No"),
                   leading: Radio(
-                      value: "female2",
-                      groupValue: gender,
-                      onChanged: (value) {
-                        setState(() {
-                          gender = value.toString();
-                        });
-                      }),
+                  groupValue: op3,
+                  fillColor: MaterialStateColor.resolveWith((states) => Colors.green),
+                  onChanged: (String? value){
+                  setState(() {
+                  op3 = value;
+                 });
+                }, 
+                 value: 'Informe2'),
                 ),
               ),  
             ],
@@ -503,13 +515,14 @@ class EditableTextState extends State<EstiloFormulario> {
                 child: ListTile(
                   title: const Text("Si"),
                   leading: Radio(
-                      value: "male3",
-                      groupValue: gender,
-                      onChanged: (value) {
-                        setState(() {
-                          gender = value.toString();
-                        });
-                      }),
+                  groupValue: op4,
+                  fillColor: MaterialStateColor.resolveWith((states) => Colors.green),
+                  onChanged: (String? value){
+                  setState(() {
+                  op4 = value;
+                 });
+                }, 
+                 value: 'Comentarios1'),
                 ),
               ),
               SizedBox(
@@ -517,13 +530,14 @@ class EditableTextState extends State<EstiloFormulario> {
                 child: ListTile(
                   title: const Text("No"),
                   leading: Radio(
-                      value: "female3",
-                      groupValue: gender,
-                      onChanged: (value) {
-                        setState(() {
-                          gender = value.toString();
-                        });
-                      }),
+                  groupValue: op4,
+                  fillColor: MaterialStateColor.resolveWith((states) => Colors.green),
+                  onChanged: (String? value){
+                  setState(() {
+                  op4 = value;
+                 });
+                }, 
+                 value: 'Comentarios2'),
                 ),
               ),  
             ],
@@ -539,13 +553,14 @@ class EditableTextState extends State<EstiloFormulario> {
                 child: ListTile(
                   title: const Text("1.EXCELENTE"),
                   leading: Radio(
-                      value: "Excelente",
-                      groupValue: gender,
-                      onChanged: (value) {
-                        setState(() {
-                          gender = value.toString();
-                        });
-                      }),
+                  groupValue: op5,
+                  fillColor: MaterialStateColor.resolveWith((states) => Colors.green),
+                  onChanged: (String? value){
+                  setState(() {
+                  op5 = value;
+                 });
+                }, 
+                 value: 'Excelente'),
                 ),
               ),
               SizedBox(
@@ -553,13 +568,14 @@ class EditableTextState extends State<EstiloFormulario> {
                 child: ListTile(
                   title: const Text("2.BUENO"),
                   leading: Radio(
-                      value: "Bueno",
-                      groupValue: gender,
-                      onChanged: (value) {
-                        setState(() {
-                          gender = value.toString();
-                        });
-                      }),
+                  groupValue: op5,
+                  fillColor: MaterialStateColor.resolveWith((states) => Colors.green),
+                  onChanged: (String? value){
+                  setState(() {
+                  op5 = value;
+                 });
+                }, 
+                 value: 'Bueno'),
                 ),
               ),
             ],
@@ -572,13 +588,14 @@ class EditableTextState extends State<EstiloFormulario> {
                 child: ListTile(
                   title: const Text("3.REGULAR"),
                   leading: Radio(
-                      value: "Regular",
-                      groupValue: gender,
-                      onChanged: (value) {
-                        setState(() {
-                          gender = value.toString();
-                        });
-                      }),
+                  groupValue: op5,
+                  fillColor: MaterialStateColor.resolveWith((states) => Colors.green),
+                  onChanged: (String? value){
+                  setState(() {
+                  op5 = value;
+                 });
+                }, 
+                 value: 'Regular'),
                 ),
               ),
               SizedBox(
@@ -586,13 +603,14 @@ class EditableTextState extends State<EstiloFormulario> {
                 child: ListTile(
                   title: const Text("4.MALO"),
                   leading: Radio(
-                      value: "Malo",
-                      groupValue: gender,
-                      onChanged: (value) {
-                        setState(() {
-                          gender = value.toString();
-                        });
-                      }),
+                  groupValue: op5,
+                  fillColor: MaterialStateColor.resolveWith((states) => Colors.green),
+                  onChanged: (String? value){
+                  setState(() {
+                  op5 = value;
+                 });
+                }, 
+                 value: 'Malo'),
                 ),
               ),
             ],
