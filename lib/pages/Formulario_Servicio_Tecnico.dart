@@ -1,3 +1,4 @@
+import 'package:proyecto_blindar/pages/Elementos_Suministrados.dart';
 import 'package:proyecto_blindar/pages/Firma.dart';
 import 'package:flutter/material.dart';
 import 'package:proyecto_blindar/pages/Opciones.dart';
@@ -140,9 +141,7 @@ class EditableTextState extends State<EstiloFormulario> {
                   ),
                 ],
               ),
-              SizedBox(
-                height: 30,
-              ),
+              
               Visibility(
                   visible: btn_visible,
                   child: ElevatedButton(
@@ -151,10 +150,15 @@ class EditableTextState extends State<EstiloFormulario> {
                     backgroundColor: MaterialStateProperty.all(
                         Color.fromARGB(255, 77, 190, 43)),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => FormularioElementosSuministrados()));
+                  },
                 ),
               ),
-
+              SizedBox(
+                height: 20,
+              ),
               const Divider(),
               Text('DETALLE DE LA ACTIVIDAD REALIZADA: *'),
               Row(
@@ -605,24 +609,6 @@ class EditableTextState extends State<EstiloFormulario> {
             ],
           ),
         ),
-
-        /*
-          
-          
-          
-          
-
-          
-          
-
-          
-
-          
-
-          
-             
-
-        */
       ),
     );
   }
