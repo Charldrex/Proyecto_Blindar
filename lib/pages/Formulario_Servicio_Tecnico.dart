@@ -1,6 +1,7 @@
 import 'package:proyecto_blindar/pages/Elementos_Suministrados.dart';
 import 'package:proyecto_blindar/pages/Firma.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_dialog/flutter_custom_dialog.dart';
 import 'package:proyecto_blindar/pages/Opciones.dart';
 import 'package:proyecto_blindar/pages/Firma.dart';
 
@@ -141,21 +142,85 @@ class EditableTextState extends State<EstiloFormulario> {
                   ),
                 ],
               ),
-              
-              Visibility(
-                  visible: btn_visible,
-                  child: ElevatedButton(
-                  child: const Text('Adicionar'),
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                        Color.fromARGB(255, 77, 190, 43)),
+              Container(
+                  child: Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 16.0, horizontal: 16.0),
+                    child: Visibility(
+                      visible: btn_visible,
+                      child: ElevatedButton(
+                        child: const Text('Adicionar'),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                              Color.fromARGB(255, 77, 190, 43)),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      FormularioElementosSuministrados()));
+                        },
+                      ),
+                    ),
                   ),
-                  onPressed: () {
-                    Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => FormularioElementosSuministrados()));
-                  },
-                ),
-              ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 16.0, horizontal: 155.0),
+                    child: Visibility(
+                      visible: btn_visible,
+                      child: ElevatedButton(
+                        child: const Text('Ver elementos'),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                              Color.fromARGB(255, 77, 190, 43)),
+                        ),
+                        onPressed: () {
+                          showDialog(
+                              context: context,
+                              builder: (context) {
+                                return Dialog(
+                                  child: Stack(children: [
+                                    Container(
+                                      child: Column(children: [
+                                        Table(
+                                          children: [
+                                            TableRow(children: <Widget>[
+                                              Padding(
+                                                padding: EdgeInsets.all(10.0),
+                                                child: Text("Hola"),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.all(10.0),
+                                                child: Text("Hola1"),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.all(10.0),
+                                                child: Text("Hola1"),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.all(10.0),
+                                                child: Text("Hola1"),
+                                              ),
+                                            ])
+                                          ],
+                                          border: TableBorder.all(),
+                                          defaultColumnWidth:
+                                              const FixedColumnWidth(90.0),
+                                        ),
+                                      ]),
+                                    ),
+                                  ]),
+                                );
+                              });
+                        },
+                      ),
+                    ),
+                  ),
+                ],
+              )),
               SizedBox(
                 height: 20,
               ),
