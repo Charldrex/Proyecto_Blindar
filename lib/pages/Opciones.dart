@@ -114,7 +114,11 @@ class MenuCliente extends StatelessWidget {
                 //color: Colors.white,
                 //),
                 title: const Text('Creación de productos'),
-                
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            const FormularioCreacionDeProductos())),
               ),
               ListTile(
                 tileColor: Colors.indigo.shade50,

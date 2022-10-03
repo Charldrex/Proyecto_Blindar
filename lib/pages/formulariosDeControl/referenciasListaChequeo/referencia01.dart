@@ -27,6 +27,10 @@ class Referencia01 extends StatelessWidget {
   }
 }
 
+Widget _circularProgressIndicator() {
+  return CircularProgressIndicator();
+}
+
 class MyCustomForm01 extends StatefulWidget {
   @override
   MyCustomForm01State createState() {
@@ -35,8 +39,44 @@ class MyCustomForm01 extends StatefulWidget {
 }
 
 class MyCustomForm01State extends State<MyCustomForm01> {
-  bool isChecked = false; //variables CheckboxListTile
+  //variables CheckboxListTile
   bool isChecked1 = false;
+  bool isChecked2 = false;
+  bool isChecked3 = false;
+  bool isChecked4 = false;
+  bool isChecked5 = false;
+  bool isChecked6 = false;
+  bool isChecked7 = false;
+  bool isChecked8 = false;
+  bool isChecked9 = false;
+  bool isChecked10 = false;
+  bool isChecked11 = false;
+  bool isChecked12 = false;
+  bool isChecked13 = false;
+  bool isChecked14 = false;
+  bool isChecked15 = false;
+  bool isChecked16 = false;
+  bool isChecked17 = false;
+  bool isChecked18 = false;
+  bool isChecked19 = false;
+  bool isChecked20 = false;
+  bool isChecked21 = false;
+  bool isChecked22 = false;
+  bool isChecked23 = false;
+  bool isChecked24 = false;
+  bool isChecked25 = false;
+  bool isChecked26 = false;
+  bool isChecked27 = false;
+  bool isChecked28 = false;
+  bool isChecked29 = false;
+  bool isChecked30 = false;
+  bool isChecked31 = false;
+  bool isChecked32 = false;
+  bool isChecked33 = false;
+  bool isChecked34 = false;
+  bool isChecked35 = false;
+  bool isChecked36 = false;
+  bool isChecked37 = false;
 
   String? var1; //variables RadioListTile
   String? var2;
@@ -257,10 +297,10 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("VIDRIO TEMPLADO DE SEGURIDAD"),
                   checkColor: Colors.white,
-                  value: isChecked,
+                  value: isChecked1,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked = value!;
+                      isChecked1 = value!;
                     });
                   },
                 ),
@@ -320,10 +360,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -338,12 +386,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("LOS RETRABES ESTÁN BIEN ENSAMBLADOS"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked2,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked2 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -393,10 +449,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -411,12 +475,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("PASADOR CROMADO INSTALADO"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked3,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked3 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -466,10 +538,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -485,12 +565,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   title: const Text(
                       "TODOS LOS PINES CHAVETAS SE ENCUENTRAN ABIERTOS (7)"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked4,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked4 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -540,10 +628,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -558,12 +654,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("MANIJA"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked5,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked5 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -613,10 +717,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -632,12 +744,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   title: const Text(
                       "CABLE POSITIVO DE ALIMENTACIÓN PASANDO POR EL TECLADO"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked6,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked6 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -687,10 +807,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -706,12 +834,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   title: const Text(
                       "5 TORNILLOS DE FIJACIÓN CONTRAMARCO BASE DE TECLADO"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked7,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked7 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -761,10 +897,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -780,12 +924,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   title: const Text(
                       "SELLOS DE MARCACIÓN ABIERTO, CERRADO Y DE LAS REGLAS DE CONEXIONES"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked8,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked8 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -835,10 +987,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -854,12 +1014,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   title: const Text(
                       "LOS ORIFICIOS DE LA TAPA DEL MECANISMO ESTÁN BIEN ENFRENTADOS CON LOS ORIFICIOS DEL MECANISMO"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked9,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked9 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -909,10 +1077,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -928,12 +1104,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   title: const Text(
                       "LOS PASADORES SE DESPLAZAN SUAVEMENTE EN EL MECANISMO"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked10,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked10 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -983,10 +1167,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -1001,12 +1193,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("PASADOR VERTICAL"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked11,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked11 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -1056,10 +1256,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -1074,12 +1282,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("EL TRINQUETE FUNCIONA"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked12,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked12 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -1129,10 +1345,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -1148,12 +1372,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   title: const Text(
                       "IMÁN PARA MAGNÉTICO TIPO BALA EN EL TRINQUETE"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked13,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked13 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -1203,10 +1435,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -1221,12 +1461,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("1. CABLE ROJO"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked14,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked14 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -1276,10 +1524,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -1294,12 +1550,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("2. CABLE NEGRO"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked15,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked15 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -1349,10 +1613,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -1367,12 +1639,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("3. CABLE VERDE"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked16,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked16 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -1422,10 +1702,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -1440,12 +1728,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("4. CABLE AMARILLO"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked17,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked17 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -1495,10 +1791,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -1514,12 +1818,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   title: const Text(
                       "5-6 MAGNÉTICO TIPO BALA Y MICRO SCWITH PALA LARGA PASADOR VERTICAL FUNCIONA CON EL IMÁN DEL TRINQUETE, APERTURA PUERTA"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked18,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked18 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -1569,10 +1881,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -1588,12 +1908,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   title:
                       const Text("MAGNÉTICO TIPO BALA PARA LA CONEXIÓN A DVR"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked19,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked19 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -1643,10 +1971,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -1662,12 +1998,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   title: const Text(
                       "7-8 MAGNÉTICO HONEYWELL, MICRO PATÍN Y MICRO SWITCH CONECTADOS EN SERIE, APERTURA DE TECLADOS. VERIFICAR CABLE VERDE"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked20,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked20 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -1717,10 +2061,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -1736,12 +2088,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   title: const Text(
                       "9-10 MAGNÉTICO HONEYWELL Y MICRO SWITCH CONECTADOS EN SERIE, TAMPER MECANISMO"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked21,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked21 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -1791,10 +2151,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -1810,12 +2178,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   title: const Text(
                       "11-12 MAGNÉTICO HONEYWELL Y MICRO SWITCH CONECTADOS EN SERIE, APERTURA MECANISMO"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked22,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked22 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -1865,10 +2241,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -1884,12 +2268,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   title: const Text(
                       "13-14 MICRO SWITCH EN CAJA DE CONEXIONES Y FUENTE"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked23,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked23 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -1939,10 +2331,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -1957,12 +2357,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("15-16 TÉRMICO"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked24,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked24 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -2012,10 +2420,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -2030,12 +2446,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("2 METROS DE CABLE NARANJA"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked25,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked25 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -2085,10 +2509,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -2103,12 +2535,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("PRUEBAS CAJA FUENTE"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked26,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked26 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -2158,10 +2598,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -2176,12 +2624,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("VERIFICAR LA LEVA DEL PASADOR SUPERIOR"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked27,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked27 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -2231,10 +2687,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -2249,12 +2713,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("2 METROS DE CABLE DÚPLEX POLARIZADO "),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked28,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked28 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -2304,10 +2776,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -2323,12 +2803,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   title: const Text(
                       "3 TORNILLOS DE 1/8 X 1/2 PARA TAMPER CAJA DE CONEXIONES"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked29,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked29 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -2378,10 +2866,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -2396,12 +2892,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("TAPA CAJA DE CONEXIONES"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked30,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked30 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -2451,10 +2955,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -2469,12 +2981,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("CONTRAPUERTA TECLADO"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked31,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked31 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -2524,10 +3044,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -2542,12 +3070,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("LA CERRADURA 4110 CIERRA BIEN"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked32,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked32 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -2597,10 +3133,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -2615,12 +3159,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("OJO MÁGICO INSTALADO"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked33,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked33 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -2670,10 +3222,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -2689,12 +3249,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   title: const Text(
                       "SELLOS DE SEGURIDAD PUESTO SOBRE LOS TORNILLOS DE FIJACIÓN DE LA PATA DEL MECANISMO"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked34,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked34 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -2744,10 +3312,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -2763,12 +3339,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   title: const Text(
                       "REVISAR LAS PATAS O CHASOS PARA LA FIJACIÓN DE LA PUERTA"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked35,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked35 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -2818,10 +3402,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -2836,12 +3428,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("ASEGURAR CERRADURA - TORNILLOS"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked36,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked36 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -2891,10 +3491,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
@@ -2909,12 +3517,20 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: const Text("DESMONTAR CERRADURA Y TECLADO DE PUERTAS"),
                   checkColor: Colors.white,
-                  value: isChecked1,
+                  value: isChecked37,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked1 = value!;
+                      isChecked37 = value!;
                     });
                   },
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                        child: ListTile(
+                      title: Text('INSPECCIÓN Y CONTROL:'),
+                    )),
+                  ],
                 ),
                 Row(
                   children: [
@@ -2964,10 +3580,18 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('GUARDAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('MODIFICAR'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 77, 190, 43)),
+                      ),
                     ),
                   ],
                 ),
