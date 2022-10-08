@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proyecto_blindar/pages/Formulario_Servicio_Tecnico.dart';
+import 'package:proyecto_blindar/pages/visitasNoProgramadas/formulariosContratados/servicio_tecnico/ServicioTecnico.dart';
 
 
 class FormularioElementosSuministrados extends StatefulWidget {

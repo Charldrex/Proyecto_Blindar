@@ -1,4 +1,4 @@
-import 'package:proyecto_blindar/pages/Inicio.dart';
+import 'package:proyecto_blindar/pages/screens/Inicio.dart';
 import 'package:proyecto_blindar/pages/formulariosDeControl/referenciasListaChequeo/referencia01.dart';
 import 'package:proyecto_blindar/pages/formulariosDeControl/referenciasListaChequeo/referencia02.dart';
 import 'package:proyecto_blindar/pages/formulariosDeControl/referenciasListaChequeo/referencia03.dart';

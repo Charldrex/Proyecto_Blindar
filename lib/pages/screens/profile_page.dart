@@ -1,13 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:proyecto_blindar/pages/login_page.dart';
-import 'package:proyecto_blindar/pages/registration_page.dart';
-import 'package:proyecto_blindar/pages/splash_screen.dart';
+import 'package:proyecto_blindar/pages/screens/login_page.dart';
+import 'package:proyecto_blindar/pages/carga_screen/splash_screen.dart';
 import 'package:proyecto_blindar/pages/widgets/header_widget.dart';
 
-import 'Forgot_password_page.dart';
-import 'Forgot_password_verification.dart';
+import '../olvidaste_la_contraseña/Forgot_password_page.dart';
+import 'package:proyecto_blindar/pages/olvidaste_la_contraseña/Forgot_password_verification.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -145,13 +144,13 @@ class _ProfilePageState extends State<ProfilePage> {
                       fontSize: _drawerFontSize,
                       color: Theme.of(context).accentColor),
                 ),
-                onTap: () {
+                /* onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => RegistrationPage()));
-                },
-              ),
+                }, */
+              ), 
               Divider(
                 color: Theme.of(context).primaryColor,
                 height: 1,

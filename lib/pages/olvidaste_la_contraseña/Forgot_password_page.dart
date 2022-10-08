@@ -3,10 +3,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:proyecto_blindar/common/theme_helper.dart';
 
-import '../common/theme_helper.dart';
-import 'Forgot_password_verification.dart';
-import 'login_page.dart';
-import 'widgets/header_widget.dart';
+import 'package:proyecto_blindar/pages/olvidaste_la_contraseña/Forgot_password_verification.dart';
+import 'package:proyecto_blindar/pages/screens/login_page.dart';
+import '../widgets/header_widget.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
   const ForgotPasswordPage({Key? key}) : super(key: key);

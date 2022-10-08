@@ -3,7 +3,7 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 
-import 'login_page.dart';
+import '../screens/login_page.dart';
 
 class SplashScreen extends StatefulWidget {
   SplashScreen({Key? key, required String title}) : super(key: key);

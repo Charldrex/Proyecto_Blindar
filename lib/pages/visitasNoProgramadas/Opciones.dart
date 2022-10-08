@@ -2,10 +2,8 @@ import 'package:proyecto_blindar/pages/visitasNoProgramadas/formulariosContratad
 import 'package:proyecto_blindar/pages/visitasNoProgramadas/formulariosContratados/GastosDeViaje.dart';
 import 'package:proyecto_blindar/pages/visitasNoProgramadas/formulariosContratados/MantenimientoPreventivo.dart';
 import 'package:proyecto_blindar/pages/visitasNoProgramadas/formulariosContratados/SeguridadIntegral.dart';
-import 'package:proyecto_blindar/pages/visitasNoProgramadas/formulariosContratados/ServicioTecnico.dart';
-import 'package:proyecto_blindar/pages/visitasNoProgramadas/formulariosContratados/ServicioTecnico.dart';
-import 'package:proyecto_blindar/pages/Opciones.dart';
-import 'package:proyecto_blindar/pages/Formulario_Servicio_Tecnico.dart';
+import 'package:proyecto_blindar/pages/visitasNoProgramadas/formulariosContratados/servicio_tecnico/ServicioTecnico.dart';
+
 
 import 'package:flutter/material.dart';
 
@@ -255,11 +253,7 @@ class MenuCliente extends StatelessWidget {
                 tileColor: Colors.indigo.shade50,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('INSTALACION'),
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                            const FormularioServicioTecnico())),
+                onTap: () {}
               ),
               ListTile(
                 tileColor: Colors.indigo.shade100,

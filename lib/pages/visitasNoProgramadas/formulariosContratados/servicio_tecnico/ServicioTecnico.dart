@@ -1,9 +1,8 @@
-import 'package:proyecto_blindar/pages/Elementos_Suministrados.dart';
-import 'package:proyecto_blindar/pages/Firma.dart';
+import 'package:proyecto_blindar/pages/visitasNoProgramadas/formulariosContratados/servicio_tecnico/Elementos_Suministrados.dart';
+import 'package:proyecto_blindar/pages/visitasNoProgramadas/formulariosContratados/servicio_tecnico/Firma.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_dialog/flutter_custom_dialog.dart';
-import 'package:proyecto_blindar/pages/Opciones.dart';
-import 'package:proyecto_blindar/pages/Firma.dart';
+import 'package:proyecto_blindar/pages/visitasNoProgramadas/Opciones.dart';
 
 class ServicioTecnico extends StatelessWidget {
   const ServicioTecnico({Key? key}) : super(key: key);

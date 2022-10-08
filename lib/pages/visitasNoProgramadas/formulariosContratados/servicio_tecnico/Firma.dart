@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
-import 'package:proyecto_blindar/pages/Formulario_Servicio_Tecnico.dart';
+import 'package:proyecto_blindar/pages/visitasNoProgramadas/formulariosContratados/servicio_tecnico/ServicioTecnico.dart';
 import 'package:signature/signature.dart';
 
 class Firma extends StatefulWidget {

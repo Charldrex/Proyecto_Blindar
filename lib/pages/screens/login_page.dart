@@ -1,11 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:proyecto_blindar/common/theme_helper.dart';
-import 'package:proyecto_blindar/pages/Forgot_password_page.dart';
-import 'package:proyecto_blindar/pages/profile_page.dart';
-import 'package:proyecto_blindar/pages/registration_page.dart';
-import 'package:proyecto_blindar/pages/Inicio.dart';
-import 'widgets/header_widget.dart';
+import 'package:proyecto_blindar/pages/olvidaste_la_contrase%C3%B1a/Forgot_password_page.dart';
+import 'package:proyecto_blindar/pages/screens/profile_page.dart';
+import 'package:proyecto_blindar/pages/screens/Inicio.dart';
+import '../widgets/header_widget.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key? key}) : super(key: key);
