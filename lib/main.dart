@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:proyecto_blindar/pages/screens/login_page.dart';
+import 'package:proyecto_blindar/pages/share_preferences/preferences.dart';
+import 'package:proyecto_blindar/pages/visitasNoProgramadas/formulariosContratados/servicio_tecnico/ServicioTecnico.dart';
 
 import 'pages/carga_screen/splash_screen.dart';
 
-void main() {
+void main()async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Preferences.init();
+
+
   runApp(Login());
 }
 
@@ -17,6 +26,10 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Login',
+      initialRoute: 'iniciar',
+      routes: {
+        'iniciar': ( _ ) => ServicioTecnico(),
+      },
       theme: ThemeData(
         primaryColor: _primaryColor,
         accentColor: _accentColor,

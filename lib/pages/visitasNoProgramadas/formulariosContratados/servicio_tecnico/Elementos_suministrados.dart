@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyecto_blindar/pages/share_preferences/preferences.dart';
 import 'package:proyecto_blindar/pages/visitasNoProgramadas/formulariosContratados/servicio_tecnico/ServicioTecnico.dart';
 
 
@@ -10,6 +11,8 @@ class FormularioElementosSuministrados extends StatefulWidget {
 }
 
 class _FormularioElementosSuministradosState extends State<FormularioElementosSuministrados> {
+
+
   
   List<String> lista_elementos = ['AGILIZADOR', 'ANTIPESCA', 
                 'CABINAS CAJEROS', 'CAJA EFECTIVO EN TRANSITO',
@@ -393,6 +396,7 @@ class _FormularioElementosSuministradosState extends State<FormularioElementosSu
                 height: 500,
                 child: Column(
                   children: [
+
               Text("ELEMENTOS DE *"),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -403,14 +407,16 @@ class _FormularioElementosSuministradosState extends State<FormularioElementosSu
                       child: DropdownButton<String>(
                         hint: Text("Seleccione"),                       
                         value: seleccion_elementos,
-                        
                         items: lista_elementos.map((String value){
                               return DropdownMenuItem<String>(
                                 value: value,
                                 child: Text(value),);
                             }).toList(),
 
-                        onChanged: (productos) {
+                        onChanged: (productos) {  
+                        Preferences.element = productos!;
+                       
+                    
                           if (productos == 'AGILIZADOR'){
                             elementos = agilizador;
                           } else if (productos == 'ANTIPESCA'){
@@ -484,7 +490,6 @@ class _FormularioElementosSuministradosState extends State<FormularioElementosSu
                       child: DropdownButton<String>(
                         hint: Text("Seleccione"),
                         value: seleccion_respuestos,
-                        
                         items: elementos.map((String value){
                               return DropdownMenuItem<String>(
                                 value: value,
@@ -493,11 +498,12 @@ class _FormularioElementosSuministradosState extends State<FormularioElementosSu
                             }).toList(),
 
                         onChanged: (repuestos){
+                              Preferences.replacement = repuestos!;
+
                               setState(() {
                                 seleccion_respuestos = repuestos;
                               });
                             },
-
                           elevation: 8,
                           style:TextStyle(fontSize: 12),
                           iconEnabledColor: Colors.green,
@@ -526,6 +532,11 @@ class _FormularioElementosSuministradosState extends State<FormularioElementosSu
                     height: 30,
                     width: MediaQuery.of(context).size.width * 0.4,
                     child: TextFormField(
+                      initialValue: Preferences.name,
+                      onChanged: (value){
+                        Preferences.name = value;
+                        setState((){});
+                      },
                       style: const TextStyle(
                           color: Colors.black, fontWeight: FontWeight.w300),
                       maxLines: 1,
@@ -544,6 +555,11 @@ class _FormularioElementosSuministradosState extends State<FormularioElementosSu
                     height: 30,
                     width: MediaQuery.of(context).size.width * 0.4,
                     child: TextFormField(
+                      initialValue: Preferences.bs,
+                      onChanged: (value){
+                        Preferences.bs = value;
+                        setState((){});
+                      },
                       style: const TextStyle(
                           color: Colors.black, fontWeight: FontWeight.w300),
                       maxLines: 1,

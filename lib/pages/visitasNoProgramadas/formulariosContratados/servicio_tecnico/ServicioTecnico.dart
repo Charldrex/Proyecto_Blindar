@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_dialog/flutter_custom_dialog.dart';
 import 'package:proyecto_blindar/pages/visitasNoProgramadas/Opciones.dart';
 
+import '../../../share_preferences/preferences.dart';
+
 class ServicioTecnico extends StatelessWidget {
   const ServicioTecnico({Key? key}) : super(key: key);
 
@@ -146,7 +148,7 @@ class EditableTextState extends State<EstiloFormulario> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                        vertical: 16.0, horizontal: 16.0),
+                        vertical: 5.0, horizontal: 36.0),
                     child: Visibility(
                       visible: btn_visible,
                       child: ElevatedButton(
@@ -167,7 +169,7 @@ class EditableTextState extends State<EstiloFormulario> {
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                        vertical: 16.0, horizontal: 155.0),
+                        vertical: 5.0, horizontal: 155.0),
                     child: Visibility(
                       visible: btn_visible,
                       child: ElevatedButton(
@@ -184,30 +186,35 @@ class EditableTextState extends State<EstiloFormulario> {
                                   child: Stack(children: [
                                     Container(
                                       child: Column(children: [
-                                        Table(
-                                          children: [
-                                            TableRow(children: <Widget>[
-                                              Padding(
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                          vertical: 5.0, horizontal: 30.0),
+                                          child: Table(
+                                            children: [
+                                              TableRow(children: <Widget>[
+                                                Padding(
                                                 padding: EdgeInsets.all(10.0),
-                                                child: Text("Hola"),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsets.all(10.0),
-                                                child: Text("Hola1"),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsets.all(10.0),
-                                                child: Text("Hola1"),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsets.all(10.0),
-                                                child: Text("Hola1"),
-                                              ),
-                                            ])
-                                          ],
-                                          border: TableBorder.all(),
-                                          defaultColumnWidth:
-                                              const FixedColumnWidth(90.0),
+                                                  child: Text('${Preferences.element}'),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsets.all(10.0),
+                                                  child: Text('${Preferences.replacement}'),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsets.all(10.0),
+                                                  child: Text('${Preferences.name}'),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsets.all(10.0),
+                                                  child: Text('${Preferences.bs}'),
+                                                ),
+                                                
+                                              ])
+                                            ],
+                                            border: TableBorder.all(),
+                                            defaultColumnWidth:
+                                                const FixedColumnWidth(90.0),
+                                          ),
                                         ),
                                       ]),
                                     ),
