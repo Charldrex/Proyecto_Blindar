@@ -1,3 +1,4 @@
+import 'package:proyecto_blindar/pages/formulariosDeControl/Informeproduccion/InformeProduccion.dart';
 import 'package:proyecto_blindar/pages/formulariosDeControl/ListaChequeo.dart';
 import 'package:proyecto_blindar/pages/visitasNoProgramadas/Opciones.dart';
 import 'package:flutter/material.dart';
@@ -147,9 +148,10 @@ class Inicio extends StatelessWidget {
                 tileColor: Colors.indigo.shade100,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('INFORME DE PRODUCCIÓN'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const InformeProduccion())),
               ),
             ],
           );
