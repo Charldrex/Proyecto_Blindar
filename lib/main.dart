@@ -32,7 +32,7 @@ class Login extends StatelessWidget {
       title: 'Blindar Security',
       initialRoute: 'iniciar',
       routes: {
-        'iniciar': ( _ ) => LoginPage(),
+        'iniciar': ( _ ) => InformeProduccion(),
       },
       theme: ThemeData(
         primaryColor: _primaryColor,
