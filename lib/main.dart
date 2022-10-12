@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:proyecto_blindar/pages/formulariosDeControl/Informeproduccion/InformeProduccion.dart';
 import 'package:proyecto_blindar/pages/formulariosDeControl/Informeproduccion/Productos.dart';
+import 'package:proyecto_blindar/pages/formulariosDeControl/ListaChequeo.dart';
+import 'package:proyecto_blindar/pages/formulariosDeControl/referenciasListaChequeo/referencia01.dart';
+import 'package:proyecto_blindar/pages/formulariosDeControl/referenciasListaChequeo/referencia02.dart';
+import 'package:proyecto_blindar/pages/formulariosDeControl/referenciasListaChequeo/referencia03.dart';
+import 'package:proyecto_blindar/pages/formulariosDeControl/referenciasListaChequeo/referencia04.dart';
+import 'package:proyecto_blindar/pages/formulariosDeControl/referenciasListaChequeo/referencia05.dart';
+import 'package:proyecto_blindar/pages/formulariosDeControl/referenciasListaChequeo/referencia11.dart';
 import 'package:proyecto_blindar/pages/screens/login_page.dart';
 import 'package:proyecto_blindar/pages/share_preferences/preferences.dart';
 import 'package:proyecto_blindar/pages/share_preferences/preferences_elementos2.dart';
@@ -32,7 +39,7 @@ class Login extends StatelessWidget {
       title: 'Blindar Security',
       initialRoute: 'iniciar',
       routes: {
-        'iniciar': ( _ ) => InformeProduccion(),
+        'iniciar': ( _ ) => Referencia04(),
       },
       theme: ThemeData(
         primaryColor: _primaryColor,

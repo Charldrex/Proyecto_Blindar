@@ -34,18 +34,6 @@ class ListaChequeo extends StatelessWidget {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        //decoration: const BoxDecoration(
-        //gradient: LinearGradient(
-        //colors: [
-        //Colors.green,
-        //Colors.grey,
-        //],
-        //),
-        //image: DecorationImage(
-        //image: AssetImage("icon_blindar1.png"),
-        //fit: BoxFit.cover,
-        //),
-        //),
         child: ListView(
           padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
           children: [
@@ -70,10 +58,10 @@ class ListaChequeo extends StatelessWidget {
   }
 
   Card _card(BuildContext context) {
-    return const Card(
+    return Card(
       color: Colors.transparent,
       child: ListTile(
-        textColor: Colors.white,
+        textColor: Colors.red,
         title: Text('REFERENCIAS'),
       ),
     );
