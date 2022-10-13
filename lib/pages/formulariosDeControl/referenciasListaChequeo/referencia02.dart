@@ -2677,10 +2677,10 @@ class MyCustomForm02State extends State<MyCustomForm02> {
                                       child: RadioListTile<String>(
                                         title: const Text('NO'),
                                         value: "NO",
-                                        groupValue: var6,
+                                        groupValue: var20,
                                         onChanged: (value) {
                                           setState(() {
-                                            var6 = value;
+                                            var20 = value;
                                           });
                                         },
                                       ),

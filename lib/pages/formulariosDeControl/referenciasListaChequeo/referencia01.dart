@@ -1103,10 +1103,10 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                                     title: const Text(
                                         "5 TORNILLOS DE FIJACIÓN CONTRAMARCO BASE DE TECLADO"),
                                     checkColor: Colors.white,
-                                    value: isChecked6,
+                                    value: isChecked7,
                                     onChanged: (bool? value) {
                                       setState(() {
-                                        isChecked6 = value!;
+                                        isChecked7 = value!;
                                       });
                                     },
                                   ),
@@ -1125,10 +1125,10 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                                       child: RadioListTile<String>(
                                         title: const Text('SI'),
                                         value: "SI",
-                                        groupValue: var6,
+                                        groupValue: var7,
                                         onChanged: (value) {
                                           setState(() {
-                                            var6 = value;
+                                            var7 = value;
                                           });
                                         },
                                       ),
@@ -1139,10 +1139,10 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                                       child: RadioListTile<String>(
                                         title: const Text('NO'),
                                         value: "NO",
-                                        groupValue: var6,
+                                        groupValue: var7,
                                         onChanged: (value) {
                                           setState(() {
-                                            var6 = value;
+                                            var7 = value;
                                           });
                                         },
                                       ),
@@ -1814,7 +1814,7 @@ class MyCustomForm01State extends State<MyCustomForm01> {
                                     value: isChecked12,
                                     onChanged: (bool? value) {
                                       setState(() {
-                                        isChecked6 = value!;
+                                        isChecked12 = value!;
                                       });
                                     },
                                   ),
