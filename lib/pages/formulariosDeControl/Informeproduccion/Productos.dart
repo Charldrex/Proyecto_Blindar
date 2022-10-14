@@ -10,7 +10,11 @@ class Productos2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("INFORMES DE PRODUCCIÓN"),
+        title: FittedBox(
+            child: Text(
+          "INFORMES DE PRODUCCIÓN",
+          style: TextStyle(fontSize: 15),
+        )),
         backgroundColor: Color.fromARGB(255, 77, 190, 43),
         actions: [
           IconButton(
@@ -53,7 +57,6 @@ class EditableTextState extends State<EstiloFormulario> {
   Widget build(BuildContext context) {
     return Form(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Container(
         width: double.infinity,
@@ -89,6 +92,7 @@ class EditableTextState extends State<EstiloFormulario> {
                           ),
                         ),
                       ),
+                  
                     ],
                   ),
                   const Divider(),
@@ -333,12 +337,12 @@ class EditableTextState extends State<EstiloFormulario> {
           
            
                 ],
-              ),
+              
             ),
           ),
         ),
       ),
-
+        ),
       ] 
     ));
   }

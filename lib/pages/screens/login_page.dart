@@ -44,10 +44,13 @@ class _LoginPageState extends State<LoginPage> {
                 margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
                 child: Column(
                   children: [
-                    Text(
-                      'Blindar Security',
-                      style:
-                          TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+                    FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        'Blindar Security',
+                        style:
+                            TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+                      ),
                     ),
                     Text(
                       'Ingresa con tu cuenta',
