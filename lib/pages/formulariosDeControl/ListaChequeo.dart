@@ -21,7 +21,12 @@ class ListaChequeo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("LISTA DE CHEQUEO DE PRODUCTOS TERMINADOS"),
+        title: FittedBox(
+            child: Text(
+          "LISTA DE CHEQUEO DE PRODUCTOS TERMINADOS",
+          style: TextStyle(fontSize: 15),
+        )),
+        backgroundColor: Color.fromARGB(255, 77, 190, 43),
         actions: [
           IconButton(
               iconSize: 30,
@@ -61,7 +66,7 @@ class ListaChequeo extends StatelessWidget {
     return Card(
       color: Colors.transparent,
       child: ListTile(
-        textColor: Colors.red,
+        textColor: Color.fromARGB(255, 29, 227, 69),
         title: Text('REFERENCIAS'),
       ),
     );

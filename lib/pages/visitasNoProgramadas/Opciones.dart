@@ -189,111 +189,99 @@ class MenuCliente extends StatelessWidget {
                 tileColor: Colors.indigo.shade50,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('CERRAJERIA'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ServicioTecnico())),
               ),
               ListTile(
                 tileColor: Colors.indigo.shade100,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('COIN'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ServicioTecnico())),
               ),
               ListTile(
                 tileColor: Colors.indigo.shade50,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('CONEXION'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ServicioTecnico())),
               ),
               ListTile(
                 tileColor: Colors.indigo.shade100,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('CORRECTIVO'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ServicioTecnico())),
               ),
               ListTile(
                 tileColor: Colors.indigo.shade50,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('DESCONEXION'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ServicioTecnico())),
               ),
               ListTile(
                 tileColor: Colors.indigo.shade100,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('DESCONFRONTAL'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ServicioTecnico())),
               ),
               ListTile(
                 tileColor: Colors.indigo.shade50,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('DESINSTALACION'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ServicioTecnico())),
               ),
               ListTile(
                 tileColor: Colors.indigo.shade100,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('FRONTAL'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ServicioTecnico())),
               ),
               ListTile(
                 tileColor: Colors.indigo.shade50,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('INSTALACION'),
-                onTap: () {}
+                onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ServicioTecnico())),
               ),
               ListTile(
                 tileColor: Colors.indigo.shade100,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('PREVENTIVO'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ServicioTecnico())),
               ),
               ListTile(
                 tileColor: Colors.indigo.shade50,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('PREVISTA'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ServicioTecnico())),
               ),
               ListTile(
                 tileColor: Colors.indigo.shade100,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('REINSFRONTAL'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ServicioTecnico())),
               ),
               ListTile(
                 tileColor: Colors.indigo.shade50,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('VISTAPEND'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ServicioTecnico())),
               ),
               ListTile(
                 tileColor: Colors.indigo.shade100,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('VISITATECNICA'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ServicioTecnico())),
               ),
               ListTile(
                 tileColor: Colors.indigo.shade200,

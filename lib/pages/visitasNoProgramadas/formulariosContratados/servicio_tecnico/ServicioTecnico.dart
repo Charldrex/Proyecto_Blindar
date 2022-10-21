@@ -12,8 +12,14 @@ class ServicioTecnico extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      floatingActionButton: BotonFlotante(),
       appBar: AppBar(
-        title: const Text("SERVICIO TÉCNICO"),
+        title: FittedBox(
+            child: Text(
+          "SERVICIO TECNICÓ",
+          style: TextStyle(fontSize: 15),
+        )),
         backgroundColor: Color.fromARGB(255, 77, 190, 43),
         actions: [
           IconButton(
@@ -30,6 +36,18 @@ class ServicioTecnico extends StatelessWidget {
           children: [EstiloFormulario()],
         ),
       ),
+    );
+  }
+}
+
+class BotonFlotante extends StatelessWidget {
+  const BotonFlotante({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return FloatingActionButton(
+      child: Icon(Icons.save),
+      onPressed: () {},
     );
   }
 }

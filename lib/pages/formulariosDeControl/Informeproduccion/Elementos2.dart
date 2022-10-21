@@ -374,7 +374,11 @@ class _FormularioElementosSuministradosState extends State<FormularioElementosSu
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("ELEMENTOS SUMINISTRADOS"),
+        title: FittedBox(
+            child: Text(
+          "ELEMENTOS SUMINISTRADOS",
+          style: TextStyle(fontSize: 15),
+        )),
         backgroundColor: Color.fromARGB(255, 77, 190, 43),
         actions: [
           IconButton(
@@ -519,107 +523,142 @@ class _FormularioElementosSuministradosState extends State<FormularioElementosSu
                             ),
                           ],
                       ),
-                      const Divider(),
-                      SizedBox(
-                          height: 10,
-                      ),
-                      Container(
-                            child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Align(alignment: Alignment(-1, 0), child: Text('CANTIDAD *')),
-                            Align(alignment: Alignment.topRight, child: Text('BS *'))
-                          ],
-                      )),
-                      Container(
-                            child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            SizedBox(
-                              height: 30,
-                              width: MediaQuery.of(context).size.width * 0.4,
-                              child: TextFormField(
-                                initialValue: Preferences2.cantidad2,
+                      const SizedBox(height: 10),
+                            Card(
+                              elevation: 10,
+                              shadowColor: Colors.black,
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 5.0, horizontal: 5.0),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 8.0),
+                                          child: SizedBox(
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.5,
+                                            child: TextFormField(
+                                              initialValue: Preferences2.cantidad2,
                                 onChanged: (value){
                                   Preferences2.cantidad2 = value;
                                   setState((){});
-                                },
-                                style: const TextStyle(
-                                    color: Colors.black, fontWeight: FontWeight.w300),
-                                maxLines: 1,
-                                decoration: InputDecoration(
-                                    border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5.0),
-                                )),
-                                validator: (value) {
-                                  if (value!.isEmpty) {
-                                    return 'Debe llenar todos los campos';
-                                  }
-                                },
-                              ),
-                            ),
-                            SizedBox(
-                              height: 30,
-                              width: MediaQuery.of(context).size.width * 0.4,
-                              child: TextFormField(
-                                initialValue: Preferences2.bs,
+                                              },
+                                              style: const TextStyle(
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.w300),
+                                              maxLines: 1,
+                                              keyboardType:
+                                                  TextInputType.emailAddress,
+                                              decoration: InputDecoration(
+                                                  labelText: 'CANTIDAD * ',
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            3.0),
+                                                  )),
+                                              validator: (value) {
+                                                if (value!.isEmpty) {
+                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                }
+                                              },
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              0.5,
+                                          child: TextFormField(
+                                            initialValue: Preferences2.bs,
                                 onChanged: (value){
                                   Preferences2.bs = value;
                                   setState((){});
-                                },
-                                style: const TextStyle(
-                                    color: Colors.black, fontWeight: FontWeight.w300),
-                                maxLines: 1,
-                                decoration: InputDecoration(
-                                    border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5.0),
-                                )),
-                                validator: (value) {
-                                  if (value!.isEmpty) {
-                                    return 'Debe llenar todos los campos';
-                                  }
-                                },
+                                            },
+                                            style: const TextStyle(
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.w300),
+                                            maxLines: 1,
+                                            keyboardType:
+                                                TextInputType.emailAddress,
+                                            decoration: InputDecoration(
+                                                labelText: 'BS * ',
+                                                border: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          3.0),
+                                                )),
+                                            validator: (value) {
+                                              if (value!.isEmpty) {
+                                                return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                              }
+                                            },
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
-                          ],
-                      ),
-                      ),
-                      SizedBox(
-                          height: 10,
-                      ),
-                      
-                      const Divider(),
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children:[
-                          Text("OBSERVACIONES *"),
-                          ]
-                      ),
-                  
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            SizedBox(
-                              height: 40,
-                              width: MediaQuery.of(context).size.width * 0.8,
-                              child: TextFormField(
-                                style: const TextStyle(
-                                    color: Colors.black, fontWeight: FontWeight.w300),
-                                maxLines: 1,
-                                decoration: InputDecoration(
-                                    border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5.0),
-                                )),
-                                validator: (value) {
-                                  if (value!.isEmpty) {
-                                    return 'Debe llenar todos los campos';
-                                  }
-                                },
+                            Card(
+                          
+                              elevation: 10,
+                              shadowColor: Colors.black,
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 5.0, horizontal: 5.0),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 8.0),
+                                          child: SizedBox(
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.9,
+                                            child: TextFormField(
+                                              style: const TextStyle(
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.w300),
+                                              maxLines: 1,
+                                              keyboardType:
+                                                  TextInputType.emailAddress,
+                                              decoration: InputDecoration(
+                                                  labelText: 'OBSERVACIONES * ',
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            3.0),
+                                                  )),
+                                              validator: (value) {
+                                                if (value!.isEmpty) {
+                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                }
+                                              },
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
-                          ],
-                      ),
-                  
+
+                    
                       const Divider(),
                       Text("FOTO *"),
                       Padding(
