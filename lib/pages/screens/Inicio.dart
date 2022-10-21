@@ -1,3 +1,4 @@
+import 'package:proyecto_blindar/pages/formulariosDeControl/DevolucionElementos/Devolucion_elementos_inicio.dart';
 import 'package:proyecto_blindar/pages/formulariosDeControl/Informeproduccion/InformeProduccion.dart';
 import 'package:proyecto_blindar/pages/formulariosDeControl/ListaChequeo.dart';
 import 'package:proyecto_blindar/pages/visitasNoProgramadas/Opciones.dart';
@@ -140,9 +141,10 @@ class Inicio extends StatelessWidget {
                 tileColor: Colors.indigo.shade50,
                 trailing: const Icon(Icons.arrow_forward_ios),
                 title: const Text('DEVOLUCIÓN DE ELEMENTOS'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const DevolucionElementos())),
               ),
               ListTile(
                 tileColor: Colors.indigo.shade100,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:proyecto_blindar/pages/formulariosDeControl/DevolucionElementos/Devolucion_elementos_adicionar.dart';
+import 'package:proyecto_blindar/pages/formulariosDeControl/DevolucionElementos/Devolucion_elementos_inicio.dart';
 import 'package:proyecto_blindar/pages/formulariosDeControl/Informeproduccion/Elementos2.dart';
 import 'package:proyecto_blindar/pages/formulariosDeControl/Informeproduccion/InformeProduccion.dart';
 import 'package:proyecto_blindar/pages/formulariosDeControl/Informeproduccion/Productos.dart';
@@ -41,7 +43,7 @@ class Login extends StatelessWidget {
       title: 'Blindar Security',
       initialRoute: 'iniciar',
       routes: {
-        'iniciar': ( _ ) => LoginPage(),
+        'iniciar': ( _ ) => DevolucionElementosAdicionar(),
       },
       theme: ThemeData(
         primaryColor: _primaryColor,
