@@ -714,7 +714,7 @@ class EditableTextState extends State<EstiloFormulario> {
               width: double.infinity,
               child: FittedBox(
                 child: Card(
-                  color: Colors.white30,
+                  color: Colors.white24,
                   child: Padding(
                     padding:
                         EdgeInsets.symmetric(vertical: 5.0, horizontal: 5.0),

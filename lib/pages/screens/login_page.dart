@@ -70,8 +70,9 @@ class _LoginPageState extends State<LoginPage> {
                             validator: (val) {
                               if (!(val!.isEmpty) &&
                                   !RegExp(r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$")
-                                      .hasMatch(val)) {
+                                      .hasMatch(val)) {                               
                                 return "Correo electronico invalido";
+                                
                               }
                               return null;
                             },

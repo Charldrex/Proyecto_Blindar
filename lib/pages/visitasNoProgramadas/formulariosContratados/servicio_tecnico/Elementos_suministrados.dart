@@ -1,17 +1,52 @@
+import 'dart:io';
+
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:proyecto_blindar/pages/share_preferences/preferences.dart';
+import 'package:proyecto_blindar/pages/visitasNoProgramadas/formulariosContratados/servicio_tecnico/Camara_servicio_tecnico.dart';
 import 'package:proyecto_blindar/pages/visitasNoProgramadas/formulariosContratados/servicio_tecnico/ServicioTecnico.dart';
 
-class FormularioElementosSuministrados extends StatefulWidget {
-  const FormularioElementosSuministrados({super.key});
+class FormularioElementosSuministrados extends StatelessWidget {
+  const FormularioElementosSuministrados({Key? key}) : super(key: key);
 
   @override
-  State<FormularioElementosSuministrados> createState() =>
-      _FormularioElementosSuministradosState();
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: FittedBox(
+            child: Text(
+          "ELEMENTOS SUMINISTRADOS",
+          style: TextStyle(fontSize: 15),
+        )),
+        backgroundColor: Color.fromARGB(255, 77, 190, 43),
+        actions: [
+          IconButton(
+              iconSize: 30,
+              onPressed: (() {
+                Navigator.pop(context);
+              }),
+              icon: const Icon(Icons.pause)),
+        ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: ListView(
+          children: [EstiloFormulario()],
+        ),
+      ),
+    );
+  }
 }
 
-class _FormularioElementosSuministradosState
-    extends State<FormularioElementosSuministrados> {
+class EstiloFormulario extends StatefulWidget {
+  @override
+  EditableTextState createState() {
+    return EditableTextState();
+  }
+}
+
+class EditableTextState extends State<EstiloFormulario> {
   List<String> lista_elementos = [
     'AGILIZADOR',
     'ANTIPESCA',
@@ -672,346 +707,444 @@ class _FormularioElementosSuministradosState
   String? seleccion_elementos;
   String? seleccion_respuestos;
 
+
+  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: FittedBox(
-            child: Text(
-          "ELEMENTOS SUMINISTRADOS",
-          style: TextStyle(fontSize: 15),
-        )),
-        backgroundColor: Color.fromARGB(255, 77, 190, 43),
-        actions: [
-          IconButton(
-              iconSize: 30,
-              onPressed: (() {
-                Navigator.pop(context);
-              }),
-              icon: const Icon(Icons.pause)),
-        ],
-      ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-        child: ListView(
-          children: [
-            Column(
-              children: <Widget>[
-                Container(
-                  width: double.infinity,
-                  child: FittedBox(
-                    child: Card(
-                      color: Colors.white,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 10.0, horizontal: 10.0),
-                        child: Column(
-                          children: [
-                            Text("ELEMENTOS DE *"),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                SizedBox(
-                                  height: 40,
-                                  child: DropdownButtonHideUnderline(
-                                    child: DropdownButton<String>(
-                                      hint: Text("Seleccione"),
-                                      value: seleccion_elementos,
-                                      items:
-                                          lista_elementos.map((String value) {
-                                        return DropdownMenuItem<String>(
-                                          value: value,
-                                          child: Text(value),
-                                        );
-                                      }).toList(),
-                                      onChanged: (productos) {
-                                        Preferences.element = productos!;
-
-                                        if (productos == 'AGILIZADOR') {
-                                          elementos = agilizador;
-                                        } else if (productos == 'ANTIPESCA') {
-                                          elementos = antipesca;
-                                        } else if (productos ==
-                                            'CABINAS CAJEROS') {
-                                          elementos = cabinas_cajeros;
-                                        } else if (productos ==
-                                            'CAJA EFECTIVO EN TRANSITO') {
-                                          elementos = caja_efectivo;
-                                        } else if (productos == 'CAJA RAPIDA') {
-                                          elementos = caja_rapida;
-                                        } else if (productos ==
-                                            'CAJAS FUERTES') {
-                                          elementos = caja_fuerte;
-                                        } else if (productos ==
-                                            'CAJEROS AUTOMATICOS') {
-                                          elementos = cajeros_auto;
-                                        } else if (productos == 'CERRADURAS') {
-                                          elementos = cerraduras;
-                                        } else if (productos == 'COFRES') {
-                                          elementos = cofres;
-                                        } else if (productos == 'KIOSKO') {
-                                          elementos = kiosko;
-                                        } else if (productos == 'LOGISTICA') {
-                                          elementos = logistica;
-                                        } else if (productos ==
-                                            'MECANISMO FRONTAL') {
-                                          elementos = mecanismo_fron;
-                                        } else if (productos ==
-                                            'MUEBLES METALICOS') {
-                                          elementos = muebles_metal;
-                                        } else if (productos ==
-                                            'MULTIFUNCIONAL') {
-                                          elementos = multifuncional;
-                                        } else if (productos == 'PUERTAS') {
-                                          elementos = puertas;
-                                        } else if (productos == 'SCOTIABANK') {
-                                          elementos = scotiabank;
-                                        } else if (productos ==
-                                            'SERVICIO TECNICO') {
-                                          elementos = servicio_tecnico;
-                                        } else if (productos ==
-                                            'SISTEMA DE ALARMA') {
-                                          elementos = sistema_alarma;
-                                        } else if (productos ==
-                                            'SISTEMA DE ALIMENTACION') {
-                                          elementos = sistema_alimentacion;
-                                        } else if (productos ==
-                                            'SISTEMA DE VIDEO') {
-                                          elementos = sistema_video;
-                                        } else if (productos ==
-                                            'SISTEMA EXCLUSA') {
-                                          elementos = sistema_exclusa;
-                                        } else {
-                                          elementos = [];
-                                        }
-                                        setState(() {
-                                          seleccion_elementos = productos;
-                                          seleccion_respuestos = null;
-                                        });
-                                      },
-                                      elevation: 8,
-                                      style: TextStyle(fontSize: 12),
-                                      iconEnabledColor: Colors.green,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            const Divider(),
-                            Text("REPUESTOS *"),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                SizedBox(
-                                  height: 40,
-                                  child: DropdownButtonHideUnderline(
-                                    child: DropdownButton<String>(
-                                      hint: Text("Seleccione"),
-                                      value: seleccion_respuestos,
-                                      items: elementos.map((String value) {
-                                        return DropdownMenuItem<String>(
-                                          value: value,
-                                          child: Text(value),
-                                        );
-                                      }).toList(),
-                                      onChanged: (repuestos) {
-                                        Preferences.replacement = repuestos!;
-
-                                        setState(() {
-                                          seleccion_respuestos = repuestos;
-                                        });
-                                      },
-                                      elevation: 8,
-                                      style: TextStyle(fontSize: 12),
-                                      iconEnabledColor: Colors.green,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(height: 10),
-                            Card(
-                              elevation: 10,
-                              shadowColor: Colors.black,
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    vertical: 5.0, horizontal: 5.0),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 8.0),
-                                          child: SizedBox(
-                                            width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                0.5,
-                                            child: TextFormField(
-                                              initialValue: Preferences.name,
-                                              onChanged: (value) {
-                                                Preferences.name = value;
-                                                setState(() {});
-                                              },
-                                              style: const TextStyle(
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w300),
-                                              maxLines: 1,
-                                              keyboardType:
-                                                  TextInputType.emailAddress,
-                                              decoration: InputDecoration(
-                                                  labelText: 'CANTIDAD * ',
-                                                  border: OutlineInputBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            3.0),
-                                                  )),
-                                              validator: (value) {
-                                                if (value!.isEmpty) {
-                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
-                                                }
-                                              },
-                                            ),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.5,
-                                          child: TextFormField(
-                                            initialValue: Preferences.bs,
-                                            onChanged: (value) {
-                                              Preferences.bs = value;
-                                              setState(() {});
-                                            },
-                                            style: const TextStyle(
-                                                color: Colors.black,
-                                                fontWeight: FontWeight.w300),
-                                            maxLines: 1,
-                                            keyboardType:
-                                                TextInputType.emailAddress,
-                                            decoration: InputDecoration(
-                                                labelText: 'BS * ',
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          3.0),
-                                                )),
-                                            validator: (value) {
-                                              if (value!.isEmpty) {
-                                                return 'DEBE LLENAR TODOS LOS CAMPOS';
-                                              }
-                                            },
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Card(
-                          
-                              elevation: 10,
-                              shadowColor: Colors.black,
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    vertical: 5.0, horizontal: 5.0),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 8.0),
-                                          child: SizedBox(
-                                            width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                0.9,
-                                            child: TextFormField(
-                                              style: const TextStyle(
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w300),
-                                              maxLines: 1,
-                                              keyboardType:
-                                                  TextInputType.emailAddress,
-                                              decoration: InputDecoration(
-                                                  labelText: 'OBSERVACIONES * ',
-                                                  border: OutlineInputBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            3.0),
-                                                  )),
-                                              validator: (value) {
-                                                if (value!.isEmpty) {
-                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
-                                                }
-                                              },
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            
-                            
-                            const Divider(),
-                            Text("FOTO *"),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(vertical: 16.0),
-                              child: ElevatedButton(
-                                child: const Text('Foto'),
-                                style: ButtonStyle(
-                                  backgroundColor: MaterialStateProperty.all(
-                                      Color.fromARGB(255, 77, 190, 43)),
-                                ),
-                                onPressed: () {},
-                              ),
-                            ),
-                            const Divider(),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Padding(
+    return Form(
+      key: _formKey,
+      child: Stack(children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Container(
+              width: double.infinity,
+              child: FittedBox(
+                child: Card(
+                  color: Colors.white24,
+                  child: Padding(
+                    padding:
+                        EdgeInsets.symmetric(vertical: 5.0, horizontal: 5.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 5.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Card(
+                                elevation: 10,
+                                shadowColor: Colors.black,
+                                child: Padding(
                                   padding: const EdgeInsets.symmetric(
-                                      vertical: 16.0),
-                                  child: ElevatedButton(
-                                    child: const Text('Guardar Datos'),
-                                    style: ButtonStyle(
-                                      backgroundColor:
-                                          MaterialStateProperty.all(
-                                              Color.fromARGB(255, 77, 190, 43)),
-                                    ),
-                                    onPressed: () {},
+                                      vertical: 5.0, horizontal: 5.0),
+                                  child: Column(
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            ('ELEMENTOS DE *'),
+                                          ),
+                                          Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              SizedBox(
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    1.0,
+                                                height: 40,
+                                                child:
+                                                    DropdownButtonHideUnderline(
+                                                  child: DropdownButton<String>(
+                                                    hint: Text("Seleccione"),
+                                                    value: seleccion_elementos,
+                                                    items: lista_elementos
+                                                        .map((String value) {
+                                                      return DropdownMenuItem<
+                                                          String>(
+                                                        value: value,
+                                                        child: Text(value),
+                                                      );
+                                                    }).toList(),
+                                                    onChanged: (productos) {
+                                                      Preferences.element = productos!;
+
+                                                      if (productos ==
+                                                          'AGILIZADOR') {
+                                                        elementos = agilizador;
+                                                      } else if (productos ==
+                                                          'ANTIPESCA') {
+                                                        elementos = antipesca;
+                                                      } else if (productos ==
+                                                          'CABINAS CAJEROS') {
+                                                        elementos =
+                                                            cabinas_cajeros;
+                                                      } else if (productos ==
+                                                          'CAJA EFECTIVO EN TRANSITO') {
+                                                        elementos =
+                                                            caja_efectivo;
+                                                      } else if (productos ==
+                                                          'CAJA RAPIDA') {
+                                                        elementos = caja_rapida;
+                                                      } else if (productos ==
+                                                          'CAJAS FUERTES') {
+                                                        elementos = caja_fuerte;
+                                                      } else if (productos ==
+                                                          'CAJEROS AUTOMATICOS') {
+                                                        elementos =
+                                                            cajeros_auto;
+                                                      } else if (productos ==
+                                                          'CERRADURAS') {
+                                                        elementos = cerraduras;
+                                                      } else if (productos ==
+                                                          'COFRES') {
+                                                        elementos = cofres;
+                                                      } else if (productos ==
+                                                          'KIOSKO') {
+                                                        elementos = kiosko;
+                                                      } else if (productos ==
+                                                          'LOGISTICA') {
+                                                        elementos = logistica;
+                                                      } else if (productos ==
+                                                          'MECANISMO FRONTAL') {
+                                                        elementos =
+                                                            mecanismo_fron;
+                                                      } else if (productos ==
+                                                          'MUEBLES METALICOS') {
+                                                        elementos =
+                                                            muebles_metal;
+                                                      } else if (productos ==
+                                                          'MULTIFUNCIONAL') {
+                                                        elementos =
+                                                            multifuncional;
+                                                      } else if (productos ==
+                                                          'PUERTAS') {
+                                                        elementos = puertas;
+                                                      } else if (productos ==
+                                                          'SCOTIABANK') {
+                                                        elementos = scotiabank;
+                                                      } else if (productos ==
+                                                          'SERVICIO TECNICO') {
+                                                        elementos =
+                                                            servicio_tecnico;
+                                                      } else if (productos ==
+                                                          'SISTEMA DE ALARMA') {
+                                                        elementos =
+                                                            sistema_alarma;
+                                                      } else if (productos ==
+                                                          'SISTEMA DE ALIMENTACION') {
+                                                        elementos =
+                                                            sistema_alimentacion;
+                                                      } else if (productos ==
+                                                          'SISTEMA DE VIDEO') {
+                                                        elementos =
+                                                            sistema_video;
+                                                      } else if (productos ==
+                                                          'SISTEMA EXCLUSA') {
+                                                        elementos =
+                                                            sistema_exclusa;
+                                                      } else {
+                                                        elementos = [];
+                                                      }
+                                                      setState(() {
+                                                        seleccion_elementos =
+                                                            productos;
+                                                        seleccion_respuestos =
+                                                            null;
+                                                      });
+                                                    },
+                                                    elevation: 8,
+                                                    style:
+                                                        TextStyle(fontSize: 12),
+                                                    iconEnabledColor:
+                                                        Colors.green,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ],
                                   ),
                                 ),
-                              ],
-                            )
-                          ],
+                              ),
+                              Card(
+                                elevation: 10,
+                                shadowColor: Colors.black,
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 5.0, horizontal: 5.0),
+                                  child: Column(
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            ('REPUESTOS *'),
+                                          ),
+                                          Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              SizedBox(
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    1.0,
+                                                height: 40,
+                                                child:
+                                                    DropdownButtonHideUnderline(
+                                                  child: DropdownButton<String>(
+                                                    hint: Text("Seleccione"),
+                                                    value: seleccion_respuestos,
+                                                    items: elementos
+                                                        .map((String value) {
+                                                      return DropdownMenuItem<
+                                                          String>(
+                                                        value: value,
+                                                        child: Text(value),
+                                                      );
+                                                    }).toList(),
+                                                    onChanged: (repuestos) {
+                                                      Preferences.replacement = repuestos!;
+                                                      setState(() {
+                                                        seleccion_respuestos =
+                                                            repuestos;
+                                                      });
+                                                    },
+                                                    elevation: 8,
+                                                    style:
+                                                        TextStyle(fontSize: 12),
+                                                    iconEnabledColor:
+                                                        Colors.green,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Card(
+                                elevation: 10,
+                                shadowColor: Colors.black,
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 5.0, horizontal: 5.0),
+                                  child: Column(
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            ('CANTIDAD *'),
+                                          ),
+                                          SizedBox(
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                1.0,
+                                            child: TextFormField(
+                                              style: const TextStyle(
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.w300),
+                                              maxLines: null,
+                                              keyboardType:
+                                                  TextInputType.emailAddress,
+                                              decoration: InputDecoration(
+                                                  border: OutlineInputBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(5.0),
+                                              )),
+                                              validator: (value) {
+                                                if (value!.isEmpty) {
+                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                }
+                                              },
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Card(
+                                elevation: 10,
+                                shadowColor: Colors.black,
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 5.0, horizontal: 5.0),
+                                  child: Column(
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            ('BS *'),
+                                          ),
+                                          SizedBox(
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                1.0,
+                                            child: TextFormField(
+                                              style: const TextStyle(
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.w300),
+                                              maxLines: null,
+                                              keyboardType:
+                                                  TextInputType.emailAddress,
+                                              decoration: InputDecoration(
+                                                  border: OutlineInputBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(5.0),
+                                              )),
+                                              validator: (value) {
+                                                if (value!.isEmpty) {
+                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                }
+                                              },
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Card(
+                                elevation: 10,
+                                shadowColor: Colors.black,
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 5.0, horizontal: 5.0),
+                                  child: Column(
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            ('OBSERVACIONES *'),
+                                          ),
+                                          SizedBox(
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                1.0,
+                                            child: TextFormField(
+                                              style: const TextStyle(
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.w300),
+                                              maxLines: null,
+                                              keyboardType:
+                                                  TextInputType.emailAddress,
+                                              decoration: InputDecoration(
+                                                  border: OutlineInputBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(5.0),
+                                              )),
+                                              validator: (value) {
+                                                if (value!.isEmpty) {
+                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                }
+                                              },
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Card(
+                                elevation: 10,
+                                shadowColor: Colors.black,
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 5.0, horizontal: 5.0),
+                                  child: Column(
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          
+                                          Text(
+                                            ('FOTO *'),
+                                          ),
+                                          ElevatedButton(
+                                            child: const Text('TOMAR FOTO'),
+                                            style: ButtonStyle(
+                                              backgroundColor:
+                                                  MaterialStateProperty.all(
+                                                      Color.fromARGB(
+                                                          255, 77, 190, 43)),
+                                            ),
+                                            onPressed: () async{
+                                              
+                                            },
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Card(
+                                  elevation: 10,
+                                  shadowColor: Colors.black,
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 10.0, horizontal: 100.0),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.end,
+                                      children: [
+                                        
+                                            ElevatedButton(
+                                              child: const Text('GUARDAR DATOS'),
+                                              style: ButtonStyle(
+                                                backgroundColor:
+                                                    MaterialStateProperty.all(
+                                                        Color.fromARGB(
+                                                            255, 77, 190, 43)),
+                                              ),
+                                              onPressed: () {},
+                                            ),
+                                          ],
+                                        
+                                      
+                                    ),
+                                  ),
+                                ),
+                              
+                            ],
+                          ),
                         ),
-                      ),
+                      ],
                     ),
                   ),
                 ),
-              ],
-            )
+              ),
+            ),
           ],
         ),
-      ),
+      ]),
     );
   }
 }
+
