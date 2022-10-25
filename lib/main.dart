@@ -44,8 +44,9 @@ class Login extends StatelessWidget {
       title: 'Blindar Security',
       initialRoute: 'iniciar',
       routes: {
-        'iniciar': ( _ ) => CamaraServicioTecnico(),
+        'iniciar': ( _ ) => FormularioElementosSuministrados(),
       },
+
       theme: ThemeData(
         primaryColor: _primaryColor,
         accentColor: _accentColor,

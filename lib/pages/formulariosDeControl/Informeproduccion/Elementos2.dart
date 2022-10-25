@@ -1084,6 +1084,12 @@ class EditableTextState extends State<EstiloFormulario> {
                                           Text(
                                             ('FOTO *'),
                                           ),
+                                          Container(
+                                            child:Image.asset('assets/icon_blindar1.png', width: 100),
+                                            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                                            margin: EdgeInsets.all(20),
+
+                                          ),
                                           ElevatedButton(
                                             child: const Text('TOMAR FOTO'),
                                             style: ButtonStyle(

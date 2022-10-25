@@ -74,16 +74,14 @@ class EditableTextState extends State<EstiloFormulario> {
   Widget build(BuildContext context) {
     return Form(
       key: _formKey,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Container(
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: <
+          Widget>[
+        Container(
           width: double.infinity,
           child: FittedBox(
             child: Card(
               child: Padding(
-                padding:
-                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -100,7 +98,8 @@ class EditableTextState extends State<EstiloFormulario> {
                             width: MediaQuery.of(context).size.width * 0.9,
                             child: TextFormField(
                               style: const TextStyle(
-                                  color: Colors.black, fontWeight: FontWeight.w300),
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w300),
                               maxLines: 1,
                               decoration: InputDecoration(
                                   border: OutlineInputBorder(
@@ -118,6 +117,13 @@ class EditableTextState extends State<EstiloFormulario> {
                     ),
                     const Divider(),
                     Text("FOTOS ANTES *"),
+                    Container(
+                      child:
+                          Image.asset('assets/icon_blindar1.png', width: 100),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                      margin: EdgeInsets.all(20),
+                    ),
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 16.0),
                       child: ElevatedButton(
@@ -209,37 +215,49 @@ class EditableTextState extends State<EstiloFormulario> {
                                     context: context,
                                     builder: (context) {
                                       return Dialog(
-                  
                                         child: Stack(children: [
                                           Container(
-                                            
                                             child: Column(children: [
                                               Padding(
-                                                padding: const EdgeInsets.symmetric(
-                                                vertical: 5.0, horizontal: 10.0),
-                                                
-                                                  child: DataTable(
-                                                    
-                                                    columns: [
-                                                          DataColumn(label: Text(' ')),
-                                                          DataColumn(label: Text('ELEMENTOS DE',
-                                                          maxLines: 1, overflow: TextOverflow.ellipsis)),
-                                                          DataColumn(label: Text('REPUESTOS',
-                                                          maxLines: 1, overflow: TextOverflow.ellipsis)),
-                                                        ], 
-                                                        rows: [
-                                                          DataRow(cells: [
-                                                            DataCell(Text('')),
-                                                            DataCell(Text('${Preferences.element}',
-                                                            maxLines: 1, overflow: TextOverflow.ellipsis)),
-                                                            DataCell(Text('${Preferences.replacement}', 
-                                                            maxLines: 1, overflow: TextOverflow.ellipsis)),                                          
-                                                          ]),                                             
-                                                      ],                
-                                                    border: TableBorder.all(),
-                                                    
-                                                  ),
-                                                
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        vertical: 5.0,
+                                                        horizontal: 10.0),
+                                                child: DataTable(
+                                                  columns: [
+                                                    DataColumn(
+                                                        label: Text(' ')),
+                                                    DataColumn(
+                                                        label: Text(
+                                                            'ELEMENTOS DE',
+                                                            maxLines: 1,
+                                                            overflow:
+                                                                TextOverflow
+                                                                    .ellipsis)),
+                                                    DataColumn(
+                                                        label: Text('REPUESTOS',
+                                                            maxLines: 1,
+                                                            overflow:
+                                                                TextOverflow
+                                                                    .ellipsis)),
+                                                  ],
+                                                  rows: [
+                                                    DataRow(cells: [
+                                                      DataCell(Text('')),
+                                                      DataCell(Text(
+                                                          '${Preferences.element}',
+                                                          maxLines: 1,
+                                                          overflow: TextOverflow
+                                                              .ellipsis)),
+                                                      DataCell(Text(
+                                                          '${Preferences.replacement}',
+                                                          maxLines: 1,
+                                                          overflow: TextOverflow
+                                                              .ellipsis)),
+                                                    ]),
+                                                  ],
+                                                  border: TableBorder.all(),
+                                                ),
                                               ),
                                             ]),
                                           ),
@@ -252,7 +270,6 @@ class EditableTextState extends State<EstiloFormulario> {
                         ),
                       ],
                     )),
-                    
                     const Divider(),
                     Text('DETALLE DE LA ACTIVIDAD REALIZADA: *'),
                     Padding(
@@ -265,7 +282,8 @@ class EditableTextState extends State<EstiloFormulario> {
                             width: MediaQuery.of(context).size.width * 0.9,
                             child: TextFormField(
                               style: const TextStyle(
-                                  color: Colors.black, fontWeight: FontWeight.w300),
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w300),
                               maxLines: 1,
                               decoration: InputDecoration(
                                   border: OutlineInputBorder(
@@ -331,7 +349,8 @@ class EditableTextState extends State<EstiloFormulario> {
                             width: MediaQuery.of(context).size.width * 0.9,
                             child: TextFormField(
                               style: const TextStyle(
-                                  color: Colors.black, fontWeight: FontWeight.w300),
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w300),
                               maxLines: 1,
                               decoration: InputDecoration(
                                   border: OutlineInputBorder(
@@ -372,7 +391,8 @@ class EditableTextState extends State<EstiloFormulario> {
                             width: MediaQuery.of(context).size.width * 0.9,
                             child: TextFormField(
                               style: const TextStyle(
-                                  color: Colors.black, fontWeight: FontWeight.w300),
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w300),
                               maxLines: 1,
                               decoration: InputDecoration(
                                   border: OutlineInputBorder(
@@ -390,19 +410,19 @@ class EditableTextState extends State<EstiloFormulario> {
                     ),
                     const Divider(),
                     Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Align(
-                          alignment: Alignment.topLeft,
-                          child: Text('FIRMA DEL TECNICO: *'),
-                        ),
-                        Align(
-                            alignment: Alignment(2,0), 
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child: Text('FIRMA DEL TECNICO: *'),
+                          ),
+                          Align(
+                            alignment: Alignment(2, 0),
                             child: Text('FOTO SELLO: *'),
-                        ),
-                      ],
-                    ),
+                          ),
+                        ],
+                      ),
                     ),
                     Container(
                         child: Stack(
@@ -417,8 +437,10 @@ class EditableTextState extends State<EstiloFormulario> {
                                   Color.fromARGB(255, 77, 190, 43)),
                             ),
                             onPressed: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => Firma()));
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Firma()));
                             },
                           ),
                         ),
@@ -440,20 +462,21 @@ class EditableTextState extends State<EstiloFormulario> {
                     Text('ENCARGADO'),
                     const Divider(),
                     Container(
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 5.0),
-                          child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                          Align(
-                              alignment: Alignment(-1, 0),
-                              child: Text('NOMBRE DE QUIEN RECIBE: *')),
-                          Align(
-                              alignment: Alignment.topRight,
-                              child: Text('CARGO DE QUIEN RECIBE: *'))
-                      ],
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 5.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Align(
+                                alignment: Alignment(-1, 0),
+                                child: Text('NOMBRE DE QUIEN RECIBE: *')),
+                            Align(
+                                alignment: Alignment.topRight,
+                                child: Text('CARGO DE QUIEN RECIBE: *'))
+                          ],
+                        ),
+                      ),
                     ),
-                        ),),
                     Container(
                         child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -463,7 +486,8 @@ class EditableTextState extends State<EstiloFormulario> {
                           width: MediaQuery.of(context).size.width * 0.4,
                           child: TextFormField(
                             style: const TextStyle(
-                                color: Colors.black, fontWeight: FontWeight.w300),
+                                color: Colors.black,
+                                fontWeight: FontWeight.w300),
                             maxLines: 1,
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(
@@ -481,7 +505,8 @@ class EditableTextState extends State<EstiloFormulario> {
                           width: MediaQuery.of(context).size.width * 0.4,
                           child: TextFormField(
                             style: const TextStyle(
-                                color: Colors.black, fontWeight: FontWeight.w300),
+                                color: Colors.black,
+                                fontWeight: FontWeight.w300),
                             maxLines: 1,
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(
@@ -499,17 +524,17 @@ class EditableTextState extends State<EstiloFormulario> {
                     const Divider(),
                     Container(
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 5.0),
-                          child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      padding: const EdgeInsets.symmetric(vertical: 5.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
                           Align(
                               alignment: Alignment(-1, 0),
-                              child:
-                                  Text('CÉDULA O IDENTIFICACION DE QUIEN RECIBE: *')),
-                      ],
-                    ),
-                        )),
+                              child: Text(
+                                  'CÉDULA O IDENTIFICACION DE QUIEN RECIBE: *')),
+                        ],
+                      ),
+                    )),
                     Container(
                         child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -519,7 +544,8 @@ class EditableTextState extends State<EstiloFormulario> {
                           width: MediaQuery.of(context).size.width * 0.4,
                           child: TextFormField(
                             style: const TextStyle(
-                                color: Colors.black, fontWeight: FontWeight.w300),
+                                color: Colors.black,
+                                fontWeight: FontWeight.w300),
                             maxLines: 1,
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(
@@ -557,8 +583,10 @@ class EditableTextState extends State<EstiloFormulario> {
                                   Color.fromARGB(255, 77, 190, 43)),
                             ),
                             onPressed: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => Firma()));
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Firma()));
                             },
                           ),
                         ),
@@ -725,9 +753,7 @@ class EditableTextState extends State<EstiloFormulario> {
             ),
           ),
         ),
-        ] 
-        
-      ),
+      ]),
     );
   }
 }
