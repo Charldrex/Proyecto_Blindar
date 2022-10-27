@@ -11,6 +11,8 @@ import 'package:proyecto_blindar/pages/formulariosDeControl/referenciasListaCheq
 import 'package:proyecto_blindar/pages/formulariosDeControl/referenciasListaChequeo/referencia03.dart';
 import 'package:proyecto_blindar/pages/formulariosDeControl/referenciasListaChequeo/referencia04.dart';
 import 'package:proyecto_blindar/pages/formulariosDeControl/referenciasListaChequeo/referencia05.dart';
+import 'package:proyecto_blindar/pages/formulariosDeControl/referenciasListaChequeo/referencia09.dart';
+import 'package:proyecto_blindar/pages/formulariosDeControl/referenciasListaChequeo/referencia10.dart';
 import 'package:proyecto_blindar/pages/formulariosDeControl/referenciasListaChequeo/referencia11.dart';
 import 'package:proyecto_blindar/pages/screens/login_page.dart';
 import 'package:proyecto_blindar/pages/share_preferences/preferences.dart';
@@ -44,7 +46,7 @@ class Login extends StatelessWidget {
       title: 'Blindar Security',
       initialRoute: 'iniciar',
       routes: {
-        'iniciar': ( _ ) => FormularioElementosSuministrados(),
+        'iniciar': ( _ ) => Referencia09(),
       },
 
       theme: ThemeData(

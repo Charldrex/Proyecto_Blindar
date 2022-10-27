@@ -57,8 +57,7 @@ class MyCustomForm11State extends State<MyCustomForm11> {
   Widget build(BuildContext context) {
     return Form(
       key: _formKey,
-      child: Stack(
-        children: [
+      child: Stack(children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -104,8 +103,6 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                                     fontWeight:
                                                         FontWeight.w300),
                                                 maxLines: 1,
-                                                keyboardType:
-                                                    TextInputType.emailAddress,
                                                 decoration: InputDecoration(
                                                     labelText:
                                                         'NÚMERO DE PEDIDO: * ',
@@ -116,7 +113,7 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                                     )),
                                                 validator: (value) {
                                                   if (value!.isEmpty) {
-                                                    return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                    return 'Debe llenar todos los campo';
                                                   }
                                                 },
                                               ),
@@ -132,8 +129,6 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                                   color: Colors.black,
                                                   fontWeight: FontWeight.w300),
                                               maxLines: 1,
-                                              keyboardType:
-                                                  TextInputType.emailAddress,
                                               decoration: InputDecoration(
                                                   labelText: 'DESTINO: * ',
                                                   border: OutlineInputBorder(
@@ -143,7 +138,7 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                                   )),
                                               validator: (value) {
                                                 if (value!.isEmpty) {
-                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                  return 'Debe llenar todos los campo';
                                                 }
                                               },
                                             ),
@@ -169,8 +164,6 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                                     fontWeight:
                                                         FontWeight.w300),
                                                 maxLines: 1,
-                                                keyboardType:
-                                                    TextInputType.emailAddress,
                                                 decoration: InputDecoration(
                                                     labelText:
                                                         'FABRICACIÓN: * ',
@@ -181,7 +174,7 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                                     )),
                                                 validator: (value) {
                                                   if (value!.isEmpty) {
-                                                    return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                    return 'Debe llenar todos los campo';
                                                   }
                                                 },
                                               ),
@@ -197,8 +190,6 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                                   color: Colors.black,
                                                   fontWeight: FontWeight.w300),
                                               maxLines: 1,
-                                              keyboardType:
-                                                  TextInputType.emailAddress,
                                               decoration: InputDecoration(
                                                   labelText: 'INSPECCIÓN: * ',
                                                   border: OutlineInputBorder(
@@ -208,7 +199,7 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                                   )),
                                               validator: (value) {
                                                 if (value!.isEmpty) {
-                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                  return 'Debe llenar todos los campo';
                                                 }
                                               },
                                             ),
@@ -234,8 +225,6 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                                     fontWeight:
                                                         FontWeight.w300),
                                                 maxLines: 1,
-                                                keyboardType:
-                                                    TextInputType.emailAddress,
                                                 decoration: InputDecoration(
                                                     labelText: 'CABLEADO: * ',
                                                     border: OutlineInputBorder(
@@ -245,7 +234,7 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                                     )),
                                                 validator: (value) {
                                                   if (value!.isEmpty) {
-                                                    return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                    return 'Debe llenar todos los campo';
                                                   }
                                                 },
                                               ),
@@ -261,8 +250,6 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                                   color: Colors.black,
                                                   fontWeight: FontWeight.w300),
                                               maxLines: 1,
-                                              keyboardType:
-                                                  TextInputType.emailAddress,
                                               decoration: InputDecoration(
                                                   labelText:
                                                       'NÚMERO DE CARTILLA: * ',
@@ -273,7 +260,7 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                                   )),
                                               validator: (value) {
                                                 if (value!.isEmpty) {
-                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                  return 'Debe llenar todos los campo';
                                                 }
                                               },
                                             ),
@@ -291,8 +278,7 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                               fontWeight: FontWeight.w300),
                                           maxLines: null,
                                           //maxLength: 3,
-                                          keyboardType:
-                                              TextInputType.emailAddress,
+
                                           decoration: InputDecoration(
                                               labelText: 'OBSERVACIONES: * ',
                                               border: OutlineInputBorder(
@@ -301,7 +287,7 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                               )),
                                           validator: (value) {
                                             if (value!.isEmpty) {
-                                              return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                              return 'Debe llenar todos los campo';
                                             }
                                           },
                                         ),
@@ -317,104 +303,129 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                           elevation: 10,
                           shadowColor: Colors.black,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 35.0, vertical: 5.0),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 35.0, vertical: 5.0),
                             child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                              SizedBox(
-                                width: 200,
-                                child: ListTile(
-                                  title: Text('INSPECCIÓN FINAL: *'),
-                                ),
-                              ),
-                              SizedBox(
-                                width: MediaQuery.of(context).size.width * 0.9,
-                                child: CheckboxListTile(
-                                  controlAffinity:
-                                      ListTileControlAffinity.leading,
-                                  title: const Text("AJUSTE DE CIERRE DE PUERTA"),
-                                  checkColor: Colors.white,
-                                  value: isChecked1,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      isChecked1 = value!;
-                                    });
-                                  },
-                                ),
-                              ),
-                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   SizedBox(
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.4,
-                                    child: RadioListTile<String>(
-                                      title: const Text('SI'),
-                                      value: "SI",
-                                      groupValue: var1,
-                                      onChanged: (value) {
-                                        setState(() {
-                                          var1 = value;
-                                        });
-                                      },
+                                    width: 200,
+                                    child: ListTile(
+                                      title: Text('INSPECCIÓN FINAL: *'),
                                     ),
                                   ),
                                   SizedBox(
                                     width:
-                                        MediaQuery.of(context).size.width * 0.4,
-                                    child: RadioListTile<String>(
-                                      title: const Text('NO'),
-                                      value: "NO",
-                                      groupValue: var1,
-                                      onChanged: (value) {
+                                        MediaQuery.of(context).size.width * 0.9,
+                                    child: CheckboxListTile(
+                                      controlAffinity:
+                                          ListTileControlAffinity.leading,
+                                      title: const Text(
+                                          "AJUSTE DE CIERRE DE PUERTA"),
+                                      checkColor: Colors.white,
+                                      value: isChecked1,
+                                      onChanged: (bool? value) {
                                         setState(() {
-                                          var1 = value;
+                                          isChecked1 = value!;
                                         });
                                       },
                                     ),
                                   ),
-                                ],
-                              ),
-                              SizedBox(
-                                width: MediaQuery.of(context).size.width * 0.9,
-                                child: TextFormField(
-                                  style: const TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w300),
-                                  maxLines: null,
-                                  keyboardType: TextInputType.emailAddress,
-                                  decoration: InputDecoration(
-                                      labelText: 'OBSERVACIONES:',
-                                      border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(5.0),
-                                      )),
-                                ),
-                              ),
-                              const SizedBox(height: 10),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                                    child: ElevatedButton(
-                                      onPressed: () {},
-                                      child: const Text('GUARDAR'),
-                                      style: ButtonStyle(
-                                        backgroundColor: MaterialStateProperty.all(
-                                            Color.fromARGB(255, 77, 190, 43)),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.4,
+                                        child: RadioListTile<String>(
+                                          title: const Text('SI'),
+                                          value: "SI",
+                                          groupValue: var1,
+                                          onChanged: (value) {
+                                            setState(() {
+                                              var1 = value;
+                                            });
+                                          },
+                                        ),
                                       ),
+                                      SizedBox(
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.4,
+                                        child: RadioListTile<String>(
+                                          title: const Text('NO'),
+                                          value: "NO",
+                                          groupValue: var1,
+                                          onChanged: (value) {
+                                            setState(() {
+                                              var1 = value;
+                                            });
+                                          },
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.9,
+                                    child: TextFormField(
+                                      style: const TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w300),
+                                      maxLines: null,
+                                      decoration: InputDecoration(
+                                          labelText: 'OBSERVACIONES:',
+                                          border: OutlineInputBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(5.0),
+                                          )),
+                                      validator: (value) {
+                                        if (value!.isEmpty) {
+                                          return 'Debe llenar todos los campo';
+                                        }
+                                      },
                                     ),
                                   ),
-                                  ElevatedButton(
-                                    onPressed: () {},
-                                    child: const Text('MODIFICAR'),
-                                    style: ButtonStyle(
-                                      backgroundColor: MaterialStateProperty.all(
-                                          Color.fromARGB(255, 77, 190, 43)),
-                                    ),
+                                  const SizedBox(height: 10),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 10.0),
+                                        child: ElevatedButton(
+                                          onPressed: () {
+                                            if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                          },
+                                          child: const Text('GUARDAR'),
+                                          style: ButtonStyle(
+                                            backgroundColor:
+                                                MaterialStateProperty.all(
+                                                    Color.fromARGB(
+                                                        255, 77, 190, 43)),
+                                          ),
+                                        ),
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () {},
+                                        child: const Text('MODIFICAR'),
+                                        style: ButtonStyle(
+                                          backgroundColor:
+                                              MaterialStateProperty.all(
+                                                  Color.fromARGB(
+                                                      255, 77, 190, 43)),
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
-                            ]),
+                                ]),
                           ),
                         ),
                         const SizedBox(height: 10),
@@ -422,12 +433,14 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                           elevation: 10,
                           shadowColor: Colors.black,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 35.0, vertical: 5.0),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 35.0, vertical: 5.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 SizedBox(
-                                  width: MediaQuery.of(context).size.width * 0.9,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.9,
                                   child: CheckboxListTile(
                                     controlAffinity:
                                         ListTileControlAffinity.leading,
@@ -443,7 +456,8 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                   ),
                                 ),
                                 SizedBox(
-                                  width: MediaQuery.of(context).size.width * 0.9,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.9,
                                   child: ListTile(
                                     title: Text('INSPECCIÓN Y CONTROL:'),
                                   ),
@@ -451,8 +465,8 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                 Row(
                                   children: [
                                     SizedBox(
-                                      width:
-                                          MediaQuery.of(context).size.width * 0.4,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.4,
                                       child: RadioListTile<String>(
                                         title: const Text('SI'),
                                         value: "SI",
@@ -465,8 +479,8 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                       ),
                                     ),
                                     SizedBox(
-                                      width:
-                                          MediaQuery.of(context).size.width * 0.4,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.4,
                                       child: RadioListTile<String>(
                                         title: const Text('NO'),
                                         value: "NO",
@@ -481,35 +495,50 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                   ],
                                 ),
                                 SizedBox(
-                                  width: MediaQuery.of(context).size.width * 0.9,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.9,
                                   child: TextFormField(
                                     style: const TextStyle(
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
                                           borderRadius:
                                               BorderRadius.circular(5.0),
                                         )),
+                                    validator: (value) {
+                                      if (value!.isEmpty) {
+                                        return 'Debe llenar todos los campo';
+                                      }
+                                    },
                                   ),
                                 ),
                                 const SizedBox(height: 10),
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
-                                  children: [                 
+                                  children: [
                                     Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 10.0), 
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                              .validate()) {
+                                            Scaffold.of(context).showSnackBar(
+                                                const SnackBar(
+                                                    content: Text(
+                                                        'Processing Data')));
+                                          }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
                                               MaterialStateProperty.all(
-                                                  Color.fromARGB(255, 77, 190, 43)),
+                                                  Color.fromARGB(
+                                                      255, 77, 190, 43)),
                                         ),
                                       ),
                                     ),
@@ -519,7 +548,8 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                       style: ButtonStyle(
                                         backgroundColor:
                                             MaterialStateProperty.all(
-                                                Color.fromARGB(255, 77, 190, 43)),
+                                                Color.fromARGB(
+                                                    255, 77, 190, 43)),
                                       ),
                                     ),
                                   ],
@@ -534,12 +564,14 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                           elevation: 10,
                           shadowColor: Colors.black,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 35.0, vertical: 5.0),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 35.0, vertical: 5.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 SizedBox(
-                                  width: MediaQuery.of(context).size.width * 0.9,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.9,
                                   child: CheckboxListTile(
                                     controlAffinity:
                                         ListTileControlAffinity.leading,
@@ -562,8 +594,8 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                 Row(
                                   children: [
                                     SizedBox(
-                                      width:
-                                          MediaQuery.of(context).size.width * 0.4,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.4,
                                       child: RadioListTile<String>(
                                         title: const Text('SI'),
                                         value: "SI",
@@ -576,8 +608,8 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                       ),
                                     ),
                                     SizedBox(
-                                      width:
-                                          MediaQuery.of(context).size.width * 0.4,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.4,
                                       child: RadioListTile<String>(
                                         title: const Text('NO'),
                                         value: "NO",
@@ -592,19 +624,24 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                   ],
                                 ),
                                 SizedBox(
-                                  width: MediaQuery.of(context).size.width * 0.9,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.9,
                                   child: TextFormField(
                                     style: const TextStyle(
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
                                           borderRadius:
                                               BorderRadius.circular(5.0),
                                         )),
+                                    validator: (value) {
+                                      if (value!.isEmpty) {
+                                        return 'Debe llenar todos los campo';
+                                      }
+                                    },
                                   ),
                                 ),
                                 const SizedBox(height: 10),
@@ -613,14 +650,24 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                       MainAxisAlignment.spaceEvenly,
                                   children: [
                                     Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                              .validate()) {
+                                            Scaffold.of(context).showSnackBar(
+                                                const SnackBar(
+                                                    content: Text(
+                                                        'Processing Data')));
+                                          }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
                                               MaterialStateProperty.all(
-                                                  Color.fromARGB(255, 77, 190, 43)),
+                                                  Color.fromARGB(
+                                                      255, 77, 190, 43)),
                                         ),
                                       ),
                                     ),
@@ -630,7 +677,8 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                       style: ButtonStyle(
                                         backgroundColor:
                                             MaterialStateProperty.all(
-                                                Color.fromARGB(255, 77, 190, 43)),
+                                                Color.fromARGB(
+                                                    255, 77, 190, 43)),
                                       ),
                                     ),
                                   ],
@@ -644,12 +692,14 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                           elevation: 10,
                           shadowColor: Colors.black,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 35.0, vertical: 5.0),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 35.0, vertical: 5.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 SizedBox(
-                                  width: MediaQuery.of(context).size.width * 0.9,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.9,
                                   child: CheckboxListTile(
                                     controlAffinity:
                                         ListTileControlAffinity.leading,
@@ -673,8 +723,8 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                 Row(
                                   children: [
                                     SizedBox(
-                                      width:
-                                          MediaQuery.of(context).size.width * 0.4,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.4,
                                       child: RadioListTile<String>(
                                         title: const Text('SI'),
                                         value: "SI",
@@ -687,8 +737,8 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                       ),
                                     ),
                                     SizedBox(
-                                      width:
-                                          MediaQuery.of(context).size.width * 0.4,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.4,
                                       child: RadioListTile<String>(
                                         title: const Text('NO'),
                                         value: "NO",
@@ -703,19 +753,24 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                   ],
                                 ),
                                 SizedBox(
-                                  width: MediaQuery.of(context).size.width * 0.9,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.9,
                                   child: TextFormField(
                                     style: const TextStyle(
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
                                           borderRadius:
                                               BorderRadius.circular(5.0),
                                         )),
+                                    validator: (value) {
+                                      if (value!.isEmpty) {
+                                        return 'Debe llenar todos los campo';
+                                      }
+                                    },
                                   ),
                                 ),
                                 const SizedBox(height: 10),
@@ -724,24 +779,34 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                       MainAxisAlignment.spaceEvenly,
                                   children: [
                                     Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10.0),
                                       child: ElevatedButton(
                                         onPressed: () {},
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
                                               MaterialStateProperty.all(
-                                                  Color.fromARGB(255, 77, 190, 43)),
+                                                  Color.fromARGB(
+                                                      255, 77, 190, 43)),
                                         ),
                                       ),
                                     ),
                                     ElevatedButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        if (_formKey.currentState!.validate()) {
+                                          Scaffold.of(context).showSnackBar(
+                                              const SnackBar(
+                                                  content:
+                                                      Text('Processing Data')));
+                                        }
+                                      },
                                       child: const Text('MODIFICAR'),
                                       style: ButtonStyle(
                                         backgroundColor:
                                             MaterialStateProperty.all(
-                                                Color.fromARGB(255, 77, 190, 43)),
+                                                Color.fromARGB(
+                                                    255, 77, 190, 43)),
                                       ),
                                     ),
                                   ],
@@ -755,12 +820,14 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                           elevation: 10,
                           shadowColor: Colors.black,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 35.0, vertical: 5.0),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 35.0, vertical: 5.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 SizedBox(
-                                  width: MediaQuery.of(context).size.width * 0.9,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.9,
                                   child: CheckboxListTile(
                                     controlAffinity:
                                         ListTileControlAffinity.leading,
@@ -784,8 +851,8 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                 Row(
                                   children: [
                                     SizedBox(
-                                      width:
-                                          MediaQuery.of(context).size.width * 0.4,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.4,
                                       child: RadioListTile<String>(
                                         title: const Text('SI'),
                                         value: "SI",
@@ -798,8 +865,8 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                       ),
                                     ),
                                     SizedBox(
-                                      width:
-                                          MediaQuery.of(context).size.width * 0.4,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.4,
                                       child: RadioListTile<String>(
                                         title: const Text('NO'),
                                         value: "NO",
@@ -814,19 +881,24 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                   ],
                                 ),
                                 SizedBox(
-                                  width: MediaQuery.of(context).size.width * 0.9,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.9,
                                   child: TextFormField(
                                     style: const TextStyle(
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
                                           borderRadius:
                                               BorderRadius.circular(5.0),
                                         )),
+                                    validator: (value) {
+                                      if (value!.isEmpty) {
+                                        return 'Debe llenar todos los campo';
+                                      }
+                                    },
                                   ),
                                 ),
                                 const SizedBox(height: 10),
@@ -835,24 +907,34 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                       MainAxisAlignment.spaceEvenly,
                                   children: [
                                     Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 10.0), 
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10.0),
                                       child: ElevatedButton(
                                         onPressed: () {},
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
                                               MaterialStateProperty.all(
-                                                  Color.fromARGB(255, 77, 190, 43)),
+                                                  Color.fromARGB(
+                                                      255, 77, 190, 43)),
                                         ),
                                       ),
                                     ),
                                     ElevatedButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        if (_formKey.currentState!.validate()) {
+                                          Scaffold.of(context).showSnackBar(
+                                              const SnackBar(
+                                                  content:
+                                                      Text('Processing Data')));
+                                        }
+                                      },
                                       child: const Text('MODIFICAR'),
                                       style: ButtonStyle(
                                         backgroundColor:
                                             MaterialStateProperty.all(
-                                                Color.fromARGB(255, 77, 190, 43)),
+                                                Color.fromARGB(
+                                                    255, 77, 190, 43)),
                                       ),
                                     ),
                                   ],
@@ -866,12 +948,14 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                           elevation: 10,
                           shadowColor: Colors.black,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 35.0, vertical: 5.0),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 35.0, vertical: 5.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 SizedBox(
-                                  width: MediaQuery.of(context).size.width * 0.9,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.9,
                                   child: CheckboxListTile(
                                     controlAffinity:
                                         ListTileControlAffinity.leading,
@@ -886,19 +970,17 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                     },
                                   ),
                                 ),
-                               
-                                  
-                                    SizedBox(
-                                      width: MediaQuery.of(context).size.width * 0.9,
-                                        child: ListTile(
+                                SizedBox(
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.9,
+                                    child: ListTile(
                                       title: Text('INSPECCIÓN Y CONTROL:'),
                                     )),
-                                 
                                 Row(
                                   children: [
                                     SizedBox(
-                                      width:
-                                          MediaQuery.of(context).size.width * 0.4,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.4,
                                       child: RadioListTile<String>(
                                         title: const Text('SI'),
                                         value: "SI",
@@ -911,8 +993,8 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                       ),
                                     ),
                                     SizedBox(
-                                      width:
-                                          MediaQuery.of(context).size.width * 0.4,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.4,
                                       child: RadioListTile<String>(
                                         title: const Text('NO'),
                                         value: "NO",
@@ -927,18 +1009,24 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                   ],
                                 ),
                                 SizedBox(
-                                  width: MediaQuery.of(context).size.width * 0.9,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.9,
                                   child: TextFormField(
                                     style: const TextStyle(
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(5.0),
+                                          borderRadius:
+                                              BorderRadius.circular(5.0),
                                         )),
+                                    validator: (value) {
+                                      if (value!.isEmpty) {
+                                        return 'Debe llenar todos los campo';
+                                      }
+                                    },
                                   ),
                                 ),
                                 const SizedBox(height: 10),
@@ -947,14 +1035,24 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                       MainAxisAlignment.spaceEvenly,
                                   children: [
                                     Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                              .validate()) {
+                                            Scaffold.of(context).showSnackBar(
+                                                const SnackBar(
+                                                    content: Text(
+                                                        'Processing Data')));
+                                          }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
                                               MaterialStateProperty.all(
-                                                  Color.fromARGB(255, 77, 190, 43)),
+                                                  Color.fromARGB(
+                                                      255, 77, 190, 43)),
                                         ),
                                       ),
                                     ),
@@ -964,7 +1062,8 @@ class MyCustomForm11State extends State<MyCustomForm11> {
                                       style: ButtonStyle(
                                         backgroundColor:
                                             MaterialStateProperty.all(
-                                                Color.fromARGB(255, 77, 190, 43)),
+                                                Color.fromARGB(
+                                                    255, 77, 190, 43)),
                                       ),
                                     ),
                                   ],

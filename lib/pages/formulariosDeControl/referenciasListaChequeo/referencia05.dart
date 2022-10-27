@@ -139,8 +139,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                                     fontWeight:
                                                         FontWeight.w300),
                                                 maxLines: 1,
-                                                keyboardType:
-                                                    TextInputType.emailAddress,
                                                 decoration: InputDecoration(
                                                     labelText:
                                                         'NÚMERO DE PEDIDO: * ',
@@ -151,7 +149,7 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                                     )),
                                                 validator: (value) {
                                                   if (value!.isEmpty) {
-                                                    return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                    return 'Debe llenar todos los campo';
                                                   }
                                                 },
                                               ),
@@ -167,8 +165,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                                   color: Colors.black,
                                                   fontWeight: FontWeight.w300),
                                               maxLines: 1,
-                                              keyboardType:
-                                                  TextInputType.emailAddress,
                                               decoration: InputDecoration(
                                                   labelText: 'DESTINO: * ',
                                                   border: OutlineInputBorder(
@@ -178,7 +174,7 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                                   )),
                                               validator: (value) {
                                                 if (value!.isEmpty) {
-                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                  return 'Debe llenar todos los campo';
                                                 }
                                               },
                                             ),
@@ -204,8 +200,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                                     fontWeight:
                                                         FontWeight.w300),
                                                 maxLines: 1,
-                                                keyboardType:
-                                                    TextInputType.emailAddress,
                                                 decoration: InputDecoration(
                                                     labelText:
                                                         'FABRICACIÓN: * ',
@@ -216,7 +210,7 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                                     )),
                                                 validator: (value) {
                                                   if (value!.isEmpty) {
-                                                    return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                    return 'Debe llenar todos los campo';
                                                   }
                                                 },
                                               ),
@@ -232,8 +226,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                                   color: Colors.black,
                                                   fontWeight: FontWeight.w300),
                                               maxLines: 1,
-                                              keyboardType:
-                                                  TextInputType.emailAddress,
                                               decoration: InputDecoration(
                                                   labelText: 'INSPECCIÓN: * ',
                                                   border: OutlineInputBorder(
@@ -243,7 +235,7 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                                   )),
                                               validator: (value) {
                                                 if (value!.isEmpty) {
-                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                  return 'Debe llenar todos los campo';
                                                 }
                                               },
                                             ),
@@ -269,8 +261,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                                     fontWeight:
                                                         FontWeight.w300),
                                                 maxLines: 1,
-                                                keyboardType:
-                                                    TextInputType.emailAddress,
                                                 decoration: InputDecoration(
                                                     labelText: 'CABLEADO: * ',
                                                     border: OutlineInputBorder(
@@ -280,7 +270,7 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                                     )),
                                                 validator: (value) {
                                                   if (value!.isEmpty) {
-                                                    return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                    return 'Debe llenar todos los campo';
                                                   }
                                                 },
                                               ),
@@ -296,8 +286,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                                   color: Colors.black,
                                                   fontWeight: FontWeight.w300),
                                               maxLines: 1,
-                                              keyboardType:
-                                                  TextInputType.emailAddress,
                                               decoration: InputDecoration(
                                                   labelText:
                                                       'NÚMERO DE CARTILLA: * ',
@@ -308,7 +296,7 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                                   )),
                                               validator: (value) {
                                                 if (value!.isEmpty) {
-                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                  return 'Debe llenar todos los campo';
                                                 }
                                               },
                                             ),
@@ -326,8 +314,7 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                               fontWeight: FontWeight.w300),
                                           maxLines: null,
                                           //maxLength: 3,
-                                          keyboardType:
-                                              TextInputType.emailAddress,
+
                                           decoration: InputDecoration(
                                               labelText: 'OBSERVACIONES: * ',
                                               border: OutlineInputBorder(
@@ -336,7 +323,7 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                               )),
                                           validator: (value) {
                                             if (value!.isEmpty) {
-                                              return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                              return 'Debe llenar todos los campo';
                                             }
                                           },
                                         ),
@@ -423,7 +410,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                           color: Colors.black,
                                           fontWeight: FontWeight.w300),
                                       maxLines: null,
-                                      keyboardType: TextInputType.emailAddress,
                                       decoration: InputDecoration(
                                           labelText: 'OBSERVACIONES:',
                                           border: OutlineInputBorder(
@@ -540,7 +526,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -657,7 +642,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -774,7 +758,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -891,7 +874,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1009,7 +991,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1127,7 +1108,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1245,7 +1225,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1363,7 +1342,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1481,7 +1459,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1599,7 +1576,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1717,7 +1693,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1835,7 +1810,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1953,7 +1927,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -2071,7 +2044,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -2189,7 +2161,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -2307,7 +2278,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -2425,7 +2395,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -2543,7 +2512,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -2661,7 +2629,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -2779,7 +2746,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -2897,7 +2863,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -3015,7 +2980,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -3133,7 +3097,6 @@ class MyCustomForm05State extends State<MyCustomForm05> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(

@@ -968,7 +968,7 @@ class EditableTextState extends State<EstiloFormulario> {
                                               )),
                                               validator: (value) {
                                                 if (value!.isEmpty) {
-                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                  return 'Debe llenar todos los campos';
                                                 }
                                               },
                                             ),
@@ -1013,7 +1013,7 @@ class EditableTextState extends State<EstiloFormulario> {
                                               )),
                                               validator: (value) {
                                                 if (value!.isEmpty) {
-                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                  return 'Debe llenar todos los campos';
                                                 }
                                               },
                                             ),
@@ -1058,7 +1058,7 @@ class EditableTextState extends State<EstiloFormulario> {
                                               )),
                                               validator: (value) {
                                                 if (value!.isEmpty) {
-                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                  return 'Debe llenar todos los campos';
                                                 }
                                               },
                                             ),
@@ -1079,7 +1079,7 @@ class EditableTextState extends State<EstiloFormulario> {
                                     children: [
                                       Column(
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                            CrossAxisAlignment.center,
                                         children: [
                                           Text(
                                             ('FOTO *'),
@@ -1124,7 +1124,10 @@ class EditableTextState extends State<EstiloFormulario> {
                                                         Color.fromARGB(
                                                             255, 77, 190, 43)),
                                               ),
-                                              onPressed: () {},
+                                              onPressed: () {
+                                                if (_formKey.currentState!
+                                                .validate());
+                                              },
                                             ),
                                           ],
                                         

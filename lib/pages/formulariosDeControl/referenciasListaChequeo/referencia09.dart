@@ -127,8 +127,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                                     fontWeight:
                                                         FontWeight.w300),
                                                 maxLines: 1,
-                                                keyboardType:
-                                                    TextInputType.emailAddress,
                                                 decoration: InputDecoration(
                                                     labelText:
                                                         'NÚMERO DE PEDIDO: * ',
@@ -139,7 +137,7 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                                     )),
                                                 validator: (value) {
                                                   if (value!.isEmpty) {
-                                                    return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                    return 'Debe llenar todos los campo';
                                                   }
                                                 },
                                               ),
@@ -155,8 +153,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                                   color: Colors.black,
                                                   fontWeight: FontWeight.w300),
                                               maxLines: 1,
-                                              keyboardType:
-                                                  TextInputType.emailAddress,
                                               decoration: InputDecoration(
                                                   labelText: 'DESTINO: * ',
                                                   border: OutlineInputBorder(
@@ -166,7 +162,7 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                                   )),
                                               validator: (value) {
                                                 if (value!.isEmpty) {
-                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                  return 'Debe llenar todos los campo';
                                                 }
                                               },
                                             ),
@@ -192,8 +188,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                                     fontWeight:
                                                         FontWeight.w300),
                                                 maxLines: 1,
-                                                keyboardType:
-                                                    TextInputType.emailAddress,
                                                 decoration: InputDecoration(
                                                     labelText:
                                                         'FABRICACIÓN: * ',
@@ -204,7 +198,7 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                                     )),
                                                 validator: (value) {
                                                   if (value!.isEmpty) {
-                                                    return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                    return 'Debe llenar todos los campo';
                                                   }
                                                 },
                                               ),
@@ -220,8 +214,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                                   color: Colors.black,
                                                   fontWeight: FontWeight.w300),
                                               maxLines: 1,
-                                              keyboardType:
-                                                  TextInputType.emailAddress,
                                               decoration: InputDecoration(
                                                   labelText: 'INSPECCIÓN: * ',
                                                   border: OutlineInputBorder(
@@ -231,7 +223,7 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                                   )),
                                               validator: (value) {
                                                 if (value!.isEmpty) {
-                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                  return 'Debe llenar todos los campo';
                                                 }
                                               },
                                             ),
@@ -257,8 +249,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                                     fontWeight:
                                                         FontWeight.w300),
                                                 maxLines: 1,
-                                                keyboardType:
-                                                    TextInputType.emailAddress,
                                                 decoration: InputDecoration(
                                                     labelText: 'CABLEADO: * ',
                                                     border: OutlineInputBorder(
@@ -268,7 +258,7 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                                     )),
                                                 validator: (value) {
                                                   if (value!.isEmpty) {
-                                                    return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                    return 'Debe llenar todos los campo';
                                                   }
                                                 },
                                               ),
@@ -284,8 +274,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                                   color: Colors.black,
                                                   fontWeight: FontWeight.w300),
                                               maxLines: 1,
-                                              keyboardType:
-                                                  TextInputType.emailAddress,
                                               decoration: InputDecoration(
                                                   labelText:
                                                       'NÚMERO DE CARTILLA: * ',
@@ -296,7 +284,7 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                                   )),
                                               validator: (value) {
                                                 if (value!.isEmpty) {
-                                                  return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                                  return 'Debe llenar todos los campo';
                                                 }
                                               },
                                             ),
@@ -314,8 +302,7 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                               fontWeight: FontWeight.w300),
                                           maxLines: null,
                                           //maxLength: 3,
-                                          keyboardType:
-                                              TextInputType.emailAddress,
+
                                           decoration: InputDecoration(
                                               labelText: 'OBSERVACIONES: * ',
                                               border: OutlineInputBorder(
@@ -324,7 +311,7 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                               )),
                                           validator: (value) {
                                             if (value!.isEmpty) {
-                                              return 'DEBE LLENAR TODOS LOS CAMPOS';
+                                              return 'Debe llenar todos los campo';
                                             }
                                           },
                                         ),
@@ -411,7 +398,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                           color: Colors.black,
                                           fontWeight: FontWeight.w300),
                                       maxLines: null,
-                                      keyboardType: TextInputType.emailAddress,
                                       decoration: InputDecoration(
                                           labelText: 'OBSERVACIONES:',
                                           border: OutlineInputBorder(
@@ -429,7 +415,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -528,7 +522,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -546,7 +539,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -645,7 +646,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -663,7 +663,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -762,7 +770,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -780,7 +787,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -879,7 +894,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -897,7 +911,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -997,7 +1019,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1015,7 +1036,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -1115,7 +1144,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1133,7 +1161,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -1233,7 +1269,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1251,7 +1286,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -1351,7 +1394,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1369,7 +1411,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -1469,7 +1519,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1487,7 +1536,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -1587,7 +1644,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1605,7 +1661,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -1705,7 +1769,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1723,7 +1786,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -1823,7 +1894,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1841,7 +1911,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -1941,7 +2019,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -1959,7 +2036,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -2059,7 +2144,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -2077,7 +2161,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -2177,7 +2269,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -2195,7 +2286,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -2295,7 +2394,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -2313,7 +2411,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:
@@ -2413,7 +2519,6 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w300),
                                     maxLines: null,
-                                    keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                         labelText: 'OBSERVACIONES:',
                                         border: OutlineInputBorder(
@@ -2431,7 +2536,15 @@ class MyCustomForm09State extends State<MyCustomForm09> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 10.0),
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                                .validate()) {
+                                              Scaffold.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                      content: Text(
+                                                          'Processing Data')));
+                                            }
+                                        },
                                         child: const Text('GUARDAR'),
                                         style: ButtonStyle(
                                           backgroundColor:

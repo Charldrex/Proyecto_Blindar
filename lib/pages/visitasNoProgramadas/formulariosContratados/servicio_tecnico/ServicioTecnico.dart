@@ -41,13 +41,13 @@ class ServicioTecnico extends StatelessWidget {
 }
 
 class BotonFlotante extends StatelessWidget {
-  const BotonFlotante({super.key});
 
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
       child: Icon(Icons.save),
-      onPressed: () {},
+      onPressed: () {
+      },
     );
   }
 }
