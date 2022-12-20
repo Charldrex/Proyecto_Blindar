@@ -122,13 +122,14 @@ class EditableTextState extends State<EstiloFormulario> {
                                             width: MediaQuery.of(context)
                                                     .size
                                                     .width *
-                                                1.0,                                         
+                                                1.0,
                                             child: TextFormField(
                                               style: const TextStyle(
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w300,
-                                                  fontSize: 17,),                 
-                                              maxLines: null, 
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.w300,
+                                                fontSize: 17,
+                                              ),
+                                              maxLines: null,
                                               keyboardType: TextInputType.text,
                                               decoration: InputDecoration(
                                                   border: OutlineInputBorder(
@@ -324,14 +325,28 @@ class EditableTextState extends State<EstiloFormulario> {
                                                                               child: DataTable(
                                                                                 columns: [
                                                                                   DataColumn(label: Text(' ')),
-                                                                                  DataColumn(label: Text('ELEMENTOS DE', maxLines: null, )),
-                                                                                  DataColumn(label: Text('REPUESTOS', maxLines: null, )),
+                                                                                  DataColumn(
+                                                                                      label: Text(
+                                                                                    'ELEMENTOS DE',
+                                                                                    maxLines: null,
+                                                                                  )),
+                                                                                  DataColumn(
+                                                                                      label: Text(
+                                                                                    'REPUESTOS',
+                                                                                    maxLines: null,
+                                                                                  )),
                                                                                 ],
                                                                                 rows: [
                                                                                   DataRow(cells: [
                                                                                     DataCell(Text('')),
-                                                                                    DataCell(Text('${Preferences.element}', maxLines: null, )),
-                                                                                    DataCell(Text('${Preferences.replacement}', maxLines: null,)),
+                                                                                    DataCell(Text(
+                                                                                      '${Preferences.element}',
+                                                                                      maxLines: null,
+                                                                                    )),
+                                                                                    DataCell(Text(
+                                                                                      '${Preferences.replacement}',
+                                                                                      maxLines: null,
+                                                                                    )),
                                                                                   ]),
                                                                                 ],
                                                                                 border: TableBorder.all(),
@@ -372,13 +387,14 @@ class EditableTextState extends State<EstiloFormulario> {
                                             width: MediaQuery.of(context)
                                                     .size
                                                     .width *
-                                                1.0,                                         
+                                                1.0,
                                             child: TextFormField(
                                               style: const TextStyle(
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w300,
-                                                  fontSize: 17,),                 
-                                              maxLines: null, 
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.w300,
+                                                fontSize: 17,
+                                              ),
+                                              maxLines: null,
                                               keyboardType: TextInputType.text,
                                               decoration: InputDecoration(
                                                   border: OutlineInputBorder(
@@ -398,7 +414,7 @@ class EditableTextState extends State<EstiloFormulario> {
                                   ),
                                 ),
                               ),
-                              Card( 
+                              Card(
                                 elevation: 10,
                                 shadowColor: Colors.black,
                                 child: Padding(
@@ -486,13 +502,14 @@ class EditableTextState extends State<EstiloFormulario> {
                                             width: MediaQuery.of(context)
                                                     .size
                                                     .width *
-                                                1.0,                                         
+                                                1.0,
                                             child: TextFormField(
                                               style: const TextStyle(
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w300,
-                                                  fontSize: 17,),                 
-                                              maxLines: null, 
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.w300,
+                                                fontSize: 17,
+                                              ),
+                                              maxLines: null,
                                               keyboardType: TextInputType.text,
                                               decoration: InputDecoration(
                                                   border: OutlineInputBorder(
@@ -512,7 +529,7 @@ class EditableTextState extends State<EstiloFormulario> {
                                   ),
                                 ),
                               ),
-                             Card(
+                              Card(
                                 elevation: 10,
                                 shadowColor: Colors.black,
                                 child: Padding(
@@ -534,79 +551,74 @@ class EditableTextState extends State<EstiloFormulario> {
                                                 padding: EdgeInsets.symmetric(
                                                     vertical: 5.0,
                                                     horizontal: 46.0),
-                                                  child: ElevatedButton(
-                                                    child:
-                                                        const Text('Adicionar'),
-                                                    style: ButtonStyle(
-                                                      backgroundColor:
-                                                          MaterialStateProperty
-                                                              .all(Color
-                                                                  .fromARGB(
-                                                                      255,
-                                                                      77,
-                                                                      190,
-                                                                      43)),
-                                                    ),
-                                                    onPressed: () {
-                                                      
-                                                    },
+                                                child: ElevatedButton(
+                                                  child:
+                                                      const Text('Adicionar'),
+                                                  style: ButtonStyle(
+                                                    backgroundColor:
+                                                        MaterialStateProperty
+                                                            .all(Color.fromARGB(
+                                                                255,
+                                                                77,
+                                                                190,
+                                                                43)),
                                                   ),
-                                                
+                                                  onPressed: () {},
+                                                ),
                                               ),
                                               Padding(
                                                 padding: EdgeInsets.symmetric(
                                                     vertical: 5.0,
                                                     horizontal: 150.0),
-                                                
-                                                  child: ElevatedButton(
-                                                    child: const Text(
-                                                        'Ver elementos'),
-                                                    style: ButtonStyle(
-                                                      backgroundColor:
-                                                          MaterialStateProperty
-                                                              .all(Color
-                                                                  .fromARGB(
-                                                                      255,
-                                                                      77,
-                                                                      190,
-                                                                      43)),
-                                                    ),
-                                                    onPressed: () {
-                                                      showDialog(
-                                                          context: context,
-                                                          builder: (context) {
-                                                            return Dialog(
-                                                              child: Stack(
-                                                                  children: [
-                                                                    Container(
-                                                                      child: Column(
-                                                                          children: [
-                                                                            Padding(
-                                                                              padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
-                                                                              child: DataTable(
-                                                                                columns: [
-                                                                                  DataColumn(label: Text(' ')),
-                                                                                  DataColumn(label: Text('ELEMENTOS DE', maxLines: 1, overflow: TextOverflow.ellipsis)),
-                                                                                  DataColumn(label: Text('REPUESTOS', maxLines: 1, overflow: TextOverflow.ellipsis)),
-                                                                                ],
-                                                                                rows: [
-                                                                                  DataRow(cells: [
-                                                                                    DataCell(Text('')),
-                                                                                    DataCell(Text('', maxLines: 1, overflow: TextOverflow.ellipsis)),
-                                                                                    DataCell(Text('', maxLines: 1, overflow: TextOverflow.ellipsis)),
-                                                                                  ]),
-                                                                                ],
-                                                                                border: TableBorder.all(),
-                                                                              ),
-                                                                            ),
-                                                                          ]),
-                                                                    ),
-                                                                  ]),
-                                                            );
-                                                          });
-                                                    },
+                                                child: ElevatedButton(
+                                                  child: const Text(
+                                                      'Ver elementos'),
+                                                  style: ButtonStyle(
+                                                    backgroundColor:
+                                                        MaterialStateProperty
+                                                            .all(Color.fromARGB(
+                                                                255,
+                                                                77,
+                                                                190,
+                                                                43)),
                                                   ),
-                                                
+                                                  onPressed: () {
+                                                    showDialog(
+                                                        context: context,
+                                                        builder: (context) {
+                                                          return Dialog(
+                                                            child: Stack(
+                                                                children: [
+                                                                  Container(
+                                                                    child: Column(
+                                                                        children: [
+                                                                          Padding(
+                                                                            padding:
+                                                                                const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
+                                                                            child:
+                                                                                DataTable(
+                                                                              columns: [
+                                                                                DataColumn(label: Text(' ')),
+                                                                                DataColumn(label: Text('ELEMENTOS DE')),
+                                                                                DataColumn(label: Text('REPUESTOS', maxLines: 1, overflow: TextOverflow.ellipsis)),
+                                                                              ],
+                                                                              rows: [
+                                                                                DataRow(cells: [
+                                                                                  DataCell(Text('')),
+                                                                                  DataCell(Text('', maxLines: 1, overflow: TextOverflow.ellipsis)),
+                                                                                  DataCell(Text('', maxLines: 1, overflow: TextOverflow.ellipsis)),
+                                                                                ]),
+                                                                              ],
+                                                                              border: TableBorder.all(),
+                                                                            ),
+                                                                          ),
+                                                                        ]),
+                                                                  ),
+                                                                ]),
+                                                          );
+                                                        });
+                                                  },
+                                                ),
                                               ),
                                             ],
                                           )),
@@ -636,31 +648,36 @@ class EditableTextState extends State<EstiloFormulario> {
                                               mainAxisAlignment:
                                                   MainAxisAlignment
                                                       .spaceBetween,
-                                              children: [                                              
-                                                  SizedBox(
-                                            width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                1.0,                                         
-                                            child: TextFormField(
-                                              style: const TextStyle(
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w300,
-                                                  fontSize: 17,),                 
-                                              maxLines: null, 
-                                              keyboardType: TextInputType.text,
-                                              decoration: InputDecoration(
-                                                  border: OutlineInputBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(5.0),
-                                              )),
-                                              validator: (value) {
-                                                if (value!.isEmpty) {
-                                                  return 'Debe llenar todos los campos';
-                                                }
-                                              },
-                                            ),
-                                          ),
+                                              children: [
+                                                SizedBox(
+                                                  width: MediaQuery.of(context)
+                                                          .size
+                                                          .width *
+                                                      1.0,
+                                                  child: TextFormField(
+                                                    style: const TextStyle(
+                                                      color: Colors.black,
+                                                      fontWeight:
+                                                          FontWeight.w300,
+                                                      fontSize: 17,
+                                                    ),
+                                                    maxLines: null,
+                                                    keyboardType:
+                                                        TextInputType.text,
+                                                    decoration: InputDecoration(
+                                                        border:
+                                                            OutlineInputBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              5.0),
+                                                    )),
+                                                    validator: (value) {
+                                                      if (value!.isEmpty) {
+                                                        return 'Debe llenar todos los campos';
+                                                      }
+                                                    },
+                                                  ),
+                                                ),
                                               ],
                                             ),
                                           ),
@@ -716,8 +733,8 @@ class EditableTextState extends State<EstiloFormulario> {
                                                   Padding(
                                                     padding: const EdgeInsets
                                                             .symmetric(
-                                                        vertical: 5.0,
-                                                        horizontal: 5.0),
+                                                        vertical: 10.0,
+                                                        horizontal: 35.0),
                                                     child: ElevatedButton(
                                                       child: Text('FIRMAR'),
                                                       style: ButtonStyle(
@@ -790,8 +807,8 @@ class EditableTextState extends State<EstiloFormulario> {
                                                   Padding(
                                                     padding: const EdgeInsets
                                                             .symmetric(
-                                                        vertical: 5.0,
-                                                        horizontal: 5.0),
+                                                        vertical: 10.0,
+                                                        horizontal: 20.0),
                                                     child: ElevatedButton(
                                                       child: Text('TOMAR FOTO'),
                                                       style: ButtonStyle(
@@ -804,14 +821,7 @@ class EditableTextState extends State<EstiloFormulario> {
                                                                         190,
                                                                         43)),
                                                       ),
-                                                      onPressed: () {
-                                                        Navigator.push(
-                                                            context,
-                                                            MaterialPageRoute(
-                                                                builder:
-                                                                    (context) =>
-                                                                        Firma()));
-                                                      },
+                                                      onPressed: () {},
                                                     ),
                                                   ),
                                                 ],
@@ -886,20 +896,23 @@ class EditableTextState extends State<EstiloFormulario> {
                                                     MainAxisAlignment
                                                         .spaceAround,
                                                 children: [
-                                                  SizedBox(                                                  
+                                                  SizedBox(
                                                     width:
                                                         MediaQuery.of(context)
                                                                 .size
                                                                 .width *
                                                             0.5,
                                                     child: Padding(
-                                                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                                                      padding: const EdgeInsets
+                                                              .symmetric(
+                                                          horizontal: 20),
                                                       child: TextFormField(
                                                         style: const TextStyle(
-                                                            color: Colors.black,
-                                                            fontWeight:
-                                                                FontWeight.w300,
-                                                                fontSize: 17,),
+                                                          color: Colors.black,
+                                                          fontWeight:
+                                                              FontWeight.w300,
+                                                          fontSize: 17,
+                                                        ),
                                                         maxLines: null,
                                                         decoration:
                                                             InputDecoration(
@@ -907,7 +920,8 @@ class EditableTextState extends State<EstiloFormulario> {
                                                                     OutlineInputBorder(
                                                           borderRadius:
                                                               BorderRadius
-                                                                  .circular(5.0),
+                                                                  .circular(
+                                                                      5.0),
                                                         )),
                                                         validator: (value) {
                                                           if (value!.isEmpty) {
@@ -958,20 +972,23 @@ class EditableTextState extends State<EstiloFormulario> {
                                                     MainAxisAlignment
                                                         .spaceAround,
                                                 children: [
-                                                  SizedBox(                                                  
+                                                  SizedBox(
                                                     width:
                                                         MediaQuery.of(context)
                                                                 .size
                                                                 .width *
                                                             0.5,
                                                     child: Padding(
-                                                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                                                      padding: const EdgeInsets
+                                                              .symmetric(
+                                                          horizontal: 20),
                                                       child: TextFormField(
                                                         style: const TextStyle(
-                                                            color: Colors.black,
-                                                            fontWeight:
-                                                                FontWeight.w300,
-                                                                fontSize: 17,),
+                                                          color: Colors.black,
+                                                          fontWeight:
+                                                              FontWeight.w300,
+                                                          fontSize: 17,
+                                                        ),
                                                         maxLines: null,
                                                         decoration:
                                                             InputDecoration(
@@ -979,7 +996,8 @@ class EditableTextState extends State<EstiloFormulario> {
                                                                     OutlineInputBorder(
                                                           borderRadius:
                                                               BorderRadius
-                                                                  .circular(5.0),
+                                                                  .circular(
+                                                                      5.0),
                                                         )),
                                                         validator: (value) {
                                                           if (value!.isEmpty) {
@@ -1019,7 +1037,8 @@ class EditableTextState extends State<EstiloFormulario> {
                                               mainAxisAlignment:
                                                   MainAxisAlignment.center,
                                               children: [
-                                              Text('CÉDULA O IDENTIFICACION DE QUIEN RECIBE: *')
+                                                Text(
+                                                    'CÉDULA O IDENTIFICACION DE QUIEN RECIBE: *')
                                               ],
                                             ),
                                           )),
@@ -1028,37 +1047,38 @@ class EditableTextState extends State<EstiloFormulario> {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.center,
                                             children: [
-                                              SizedBox(                                                  
-                                                    width:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .width *
-                                                            1,
-                                                    child: Padding(
-                                                      padding: const EdgeInsets.symmetric(horizontal: 50),
-                                                      child: TextFormField(
-                                                        style: const TextStyle(
-                                                            color: Colors.black,
-                                                            fontWeight:
-                                                                FontWeight.w300,
-                                                                fontSize: 17,),
-                                                        maxLines: null,
-                                                        decoration:
-                                                            InputDecoration(
-                                                                border:
-                                                                    OutlineInputBorder(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5.0),
-                                                        )),
-                                                        validator: (value) {
-                                                          if (value!.isEmpty) {
-                                                            return 'Debe llenar todos los campos';
-                                                          }
-                                                        },
-                                                      ),
+                                              SizedBox(
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    1,
+                                                child: Padding(
+                                                  padding: const EdgeInsets
+                                                          .symmetric(
+                                                      horizontal: 50),
+                                                  child: TextFormField(
+                                                    style: const TextStyle(
+                                                      color: Colors.black,
+                                                      fontWeight:
+                                                          FontWeight.w300,
+                                                      fontSize: 17,
                                                     ),
+                                                    maxLines: null,
+                                                    decoration: InputDecoration(
+                                                        border:
+                                                            OutlineInputBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              5.0),
+                                                    )),
+                                                    validator: (value) {
+                                                      if (value!.isEmpty) {
+                                                        return 'Debe llenar todos los campos';
+                                                      }
+                                                    },
                                                   ),
+                                                ),
+                                              ),
                                             ],
                                           )),
                                         ],
@@ -1106,8 +1126,8 @@ class EditableTextState extends State<EstiloFormulario> {
                                               Padding(
                                                 padding:
                                                     const EdgeInsets.symmetric(
-                                                        vertical: 5.0,
-                                                        horizontal: 5.0),
+                                                        vertical: 10.0,
+                                                        horizontal: 40.0),
                                                 child: ElevatedButton(
                                                   child: Text('FIRMAR'),
                                                   style: ButtonStyle(
@@ -1137,7 +1157,7 @@ class EditableTextState extends State<EstiloFormulario> {
                                   ),
                                 ),
                               ),
-                              Card( 
+                              Card(
                                 elevation: 10,
                                 shadowColor: Colors.black,
                                 child: Padding(
@@ -1149,7 +1169,8 @@ class EditableTextState extends State<EstiloFormulario> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          const Text('COPIA INFORME TÉCNICO: *'),
+                                          const Text(
+                                              'COPIA INFORME TÉCNICO: *'),
                                           Row(
                                             children: [
                                               SizedBox(
@@ -1230,29 +1251,34 @@ class EditableTextState extends State<EstiloFormulario> {
                                                       .spaceBetween,
                                               children: [
                                                 SizedBox(
-                                            width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                1.0,                                         
-                                            child: TextFormField(
-                                              style: const TextStyle(
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w300,
-                                                  fontSize: 17,),                 
-                                              maxLines: null, 
-                                              keyboardType: TextInputType.text,
-                                              decoration: InputDecoration(
-                                                  border: OutlineInputBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(5.0),
-                                              )),
-                                              validator: (value) {
-                                                if (value!.isEmpty) {
-                                                  return 'Debe llenar todos los campos';
-                                                }
-                                              },
-                                            ),
-                                          ),
+                                                  width: MediaQuery.of(context)
+                                                          .size
+                                                          .width *
+                                                      1.0,
+                                                  child: TextFormField(
+                                                    style: const TextStyle(
+                                                      color: Colors.black,
+                                                      fontWeight:
+                                                          FontWeight.w300,
+                                                      fontSize: 17,
+                                                    ),
+                                                    maxLines: null,
+                                                    keyboardType:
+                                                        TextInputType.text,
+                                                    decoration: InputDecoration(
+                                                        border:
+                                                            OutlineInputBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              5.0),
+                                                    )),
+                                                    validator: (value) {
+                                                      if (value!.isEmpty) {
+                                                        return 'Debe llenar todos los campos';
+                                                      }
+                                                    },
+                                                  ),
+                                                ),
                                               ],
                                             ),
                                           ),
@@ -1262,8 +1288,7 @@ class EditableTextState extends State<EstiloFormulario> {
                                   ),
                                 ),
                               ),
-                              
-                              Card( 
+                              Card(
                                 elevation: 10,
                                 shadowColor: Colors.black,
                                 child: Padding(
@@ -1275,7 +1300,8 @@ class EditableTextState extends State<EstiloFormulario> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          const Text('COMENTARIOS O ESCRIBANOS AL CORREO \npor@blindarsecurity.com: *'),
+                                          const Text(
+                                              'COMENTARIOS O ESCRIBANOS AL CORREO \npor@blindarsecurity.com: *'),
                                           Row(
                                             children: [
                                               SizedBox(
@@ -1334,7 +1360,7 @@ class EditableTextState extends State<EstiloFormulario> {
                                   ),
                                 ),
                               ),
-                              Card( 
+                              Card(
                                 elevation: 10,
                                 shadowColor: Colors.black,
                                 child: Padding(
@@ -1346,7 +1372,8 @@ class EditableTextState extends State<EstiloFormulario> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          const Text('EVALUACIÓN DEL SERVICIO: *'),
+                                          const Text(
+                                              'EVALUACIÓN DEL SERVICIO: *'),
                                           Row(
                                             children: [
                                               SizedBox(
@@ -1355,7 +1382,8 @@ class EditableTextState extends State<EstiloFormulario> {
                                                         .width *
                                                     0.5,
                                                 child: ListTile(
-                                                  title: const Text("1.EXCELENTE"),
+                                                  title:
+                                                      const Text("1.EXCELENTE"),
                                                   leading: Radio(
                                                       groupValue: op5,
                                                       fillColor:
@@ -1399,71 +1427,86 @@ class EditableTextState extends State<EstiloFormulario> {
                                               ),
                                             ],
                                           ),
-                                           Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceAround,
-                                        children: [
-                                          SizedBox(
-                                            width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                0.5,
-                                            child: ListTile(
-                                              title: const Text("3.REGULAR"),
-                                              leading: Radio(
-                                                  groupValue: op5,
-                                                  fillColor: MaterialStateColor
-                                                      .resolveWith((states) =>
-                                                          Colors.green),
-                                                  onChanged: (String? value) {
-                                                    setState(() {
-                                                      op5 = value;
-                                                    });
-                                                  },
-                                                  value: 'Regular'),
-                                            ),
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceAround,
+                                            children: [
+                                              SizedBox(
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.5,
+                                                child: ListTile(
+                                                  title:
+                                                      const Text("3.REGULAR"),
+                                                  leading: Radio(
+                                                      groupValue: op5,
+                                                      fillColor:
+                                                          MaterialStateColor
+                                                              .resolveWith(
+                                                                  (states) =>
+                                                                      Colors
+                                                                          .green),
+                                                      onChanged:
+                                                          (String? value) {
+                                                        setState(() {
+                                                          op5 = value;
+                                                        });
+                                                      },
+                                                      value: 'Regular'),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.5,
+                                                child: ListTile(
+                                                  title: const Text("4.MALO"),
+                                                  leading: Radio(
+                                                      groupValue: op5,
+                                                      fillColor:
+                                                          MaterialStateColor
+                                                              .resolveWith(
+                                                                  (states) =>
+                                                                      Colors
+                                                                          .green),
+                                                      onChanged:
+                                                          (String? value) {
+                                                        setState(() {
+                                                          op5 = value;
+                                                        });
+                                                      },
+                                                      value: 'Malo'),
+                                                ),
+                                              ),
+                                            ],
                                           ),
-                                          SizedBox(
-                                            width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                0.5,
-                                            child: ListTile(
-                                              title: const Text("4.MALO"),
-                                              leading: Radio(
-                                                  groupValue: op5,
-                                                  fillColor: MaterialStateColor
-                                                      .resolveWith((states) =>
-                                                          Colors.green),
-                                                  onChanged: (String? value) {
-                                                    setState(() {
-                                                      op5 = value;
-                                                    });
-                                                  },
-                                                  value: 'Malo'),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
                                         ],
                                       ),
                                     ],
                                   ),
                                 ),
                               ),
-
-                              
-                              Card(
-                                elevation: 10,
-                                shadowColor: Colors.black,
-                                child: Padding(
+                              Padding(
                                   padding: const EdgeInsets.symmetric(
                                       vertical: 10.0, horizontal: 100.0),
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: [
                                       ElevatedButton(
-                                        child: const Text('GUARDAR DATOS'),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(vertical:10),
+                                          child: Row(
+                                            children: [
+                                              Icon(
+                                                Icons.save_sharp,
+                                                size: 20,
+                                              ),
+                                              Text("GUARDAR"),
+                                            ],
+                                          ),
+                                        ),
                                         style: ButtonStyle(
                                           backgroundColor:
                                               MaterialStateProperty.all(
@@ -1478,7 +1521,7 @@ class EditableTextState extends State<EstiloFormulario> {
                                     ],
                                   ),
                                 ),
-                              ),
+                              
                             ],
                           ),
                         ),

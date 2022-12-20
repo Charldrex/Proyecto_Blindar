@@ -753,120 +753,121 @@ class EditableTextState extends State<EstiloFormulario> {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              SizedBox(
-                                                width: MediaQuery.of(context)
-                                                        .size
-                                                        .width *
-                                                    1.0,
-                                                height: 40,
-                                                child:
-                                                    DropdownButtonHideUnderline(
-                                                  child: DropdownButton<String>(
-                                                    hint: Text("Seleccione"),
-                                                    value: seleccion_elementos,
-                                                    items: lista_elementos
-                                                        .map((String value) {
-                                                      return DropdownMenuItem<
-                                                          String>(
-                                                        value: value,
-                                                        child: Text(value),
-                                                      );
-                                                    }).toList(),
-                                                    onChanged: (productos) {
-                                                      Preferences.element = productos!;
+                                            
+                                                SizedBox(
+                                                  width: null,
+                                                  height: 40,
+                                                  child:
+                                                      DropdownButtonHideUnderline(  
+                                                    child: DropdownButton<String>(
+                                                      hint: Text("Seleccione"),
+                                                      value: seleccion_elementos,
+                                                      items: lista_elementos
+                                                          .map((String value) {
+                                                        return DropdownMenuItem<
+                                                            String>(
+                                                          value: value,
+                                                          child: Text(value),
+                                                        );
+                                                      }).toList(),
+                                                      onChanged: (productos) {
+                                                        Preferences.element = productos!;
 
-                                                      if (productos ==
-                                                          'AGILIZADOR') {
-                                                        elementos = agilizador;
-                                                      } else if (productos ==
-                                                          'ANTIPESCA') {
-                                                        elementos = antipesca;
-                                                      } else if (productos ==
-                                                          'CABINAS CAJEROS') {
-                                                        elementos =
-                                                            cabinas_cajeros;
-                                                      } else if (productos ==
-                                                          'CAJA EFECTIVO EN TRANSITO') {
-                                                        elementos =
-                                                            caja_efectivo;
-                                                      } else if (productos ==
-                                                          'CAJA RAPIDA') {
-                                                        elementos = caja_rapida;
-                                                      } else if (productos ==
-                                                          'CAJAS FUERTES') {
-                                                        elementos = caja_fuerte;
-                                                      } else if (productos ==
-                                                          'CAJEROS AUTOMATICOS') {
-                                                        elementos =
-                                                            cajeros_auto;
-                                                      } else if (productos ==
-                                                          'CERRADURAS') {
-                                                        elementos = cerraduras;
-                                                      } else if (productos ==
-                                                          'COFRES') {
-                                                        elementos = cofres;
-                                                      } else if (productos ==
-                                                          'KIOSKO') {
-                                                        elementos = kiosko;
-                                                      } else if (productos ==
-                                                          'LOGISTICA') {
-                                                        elementos = logistica;
-                                                      } else if (productos ==
-                                                          'MECANISMO FRONTAL') {
-                                                        elementos =
-                                                            mecanismo_fron;
-                                                      } else if (productos ==
-                                                          'MUEBLES METALICOS') {
-                                                        elementos =
-                                                            muebles_metal;
-                                                      } else if (productos ==
-                                                          'MULTIFUNCIONAL') {
-                                                        elementos =
-                                                            multifuncional;
-                                                      } else if (productos ==
-                                                          'PUERTAS') {
-                                                        elementos = puertas;
-                                                      } else if (productos ==
-                                                          'SCOTIABANK') {
-                                                        elementos = scotiabank;
-                                                      } else if (productos ==
-                                                          'SERVICIO TECNICO') {
-                                                        elementos =
-                                                            servicio_tecnico;
-                                                      } else if (productos ==
-                                                          'SISTEMA DE ALARMA') {
-                                                        elementos =
-                                                            sistema_alarma;
-                                                      } else if (productos ==
-                                                          'SISTEMA DE ALIMENTACION') {
-                                                        elementos =
-                                                            sistema_alimentacion;
-                                                      } else if (productos ==
-                                                          'SISTEMA DE VIDEO') {
-                                                        elementos =
-                                                            sistema_video;
-                                                      } else if (productos ==
-                                                          'SISTEMA EXCLUSA') {
-                                                        elementos =
-                                                            sistema_exclusa;
-                                                      } else {
-                                                        elementos = [];
-                                                      }
-                                                      setState(() {
-                                                        seleccion_elementos =
-                                                            productos;
-                                                        seleccion_respuestos =
-                                                            null;
-                                                      });
-                                                    },
-                                                    elevation: 8,
-                                                    style:
-                                                        TextStyle(fontSize: 12),
-                                                    iconEnabledColor:
-                                                        Colors.green,
+                                                        if (productos ==
+                                                            'AGILIZADOR') {
+                                                          elementos = agilizador;
+                                                        } else if (productos ==
+                                                            'ANTIPESCA') {
+                                                          elementos = antipesca;
+                                                        } else if (productos ==
+                                                            'CABINAS CAJEROS') {
+                                                          elementos =
+                                                              cabinas_cajeros;
+                                                        } else if (productos ==
+                                                            'CAJA EFECTIVO EN TRANSITO') {
+                                                          elementos =
+                                                              caja_efectivo;
+                                                        } else if (productos ==
+                                                            'CAJA RAPIDA') {
+                                                          elementos = caja_rapida;
+                                                        } else if (productos ==
+                                                            'CAJAS FUERTES') {
+                                                          elementos = caja_fuerte;
+                                                        } else if (productos ==
+                                                            'CAJEROS AUTOMATICOS') {
+                                                          elementos =
+                                                              cajeros_auto;
+                                                        } else if (productos ==
+                                                            'CERRADURAS') {
+                                                          elementos = cerraduras;
+                                                        } else if (productos ==
+                                                            'COFRES') {
+                                                          elementos = cofres;
+                                                        } else if (productos ==
+                                                            'KIOSKO') {
+                                                          elementos = kiosko;
+                                                        } else if (productos ==
+                                                            'LOGISTICA') {
+                                                          elementos = logistica;
+                                                        } else if (productos ==
+                                                            'MECANISMO FRONTAL') {
+                                                          elementos =
+                                                              mecanismo_fron;
+                                                        } else if (productos ==
+                                                            'MUEBLES METALICOS') {
+                                                          elementos =
+                                                              muebles_metal;
+                                                        } else if (productos ==
+                                                            'MULTIFUNCIONAL') {
+                                                          elementos =
+                                                              multifuncional;
+                                                        } else if (productos ==
+                                                            'PUERTAS') {
+                                                          elementos = puertas;
+                                                        } else if (productos ==
+                                                            'SCOTIABANK') {
+                                                          elementos = scotiabank;
+                                                        } else if (productos ==
+                                                            'SERVICIO TECNICO') {
+                                                          elementos =
+                                                              servicio_tecnico;
+                                                        } else if (productos ==
+                                                            'SISTEMA DE ALARMA') {
+                                                          elementos =
+                                                              sistema_alarma;
+                                                        } else if (productos ==
+                                                            'SISTEMA DE ALIMENTACION') {
+                                                          elementos =
+                                                              sistema_alimentacion;
+                                                        } else if (productos ==
+                                                            'SISTEMA DE VIDEO') {
+                                                          elementos =
+                                                              sistema_video;
+                                                        } else if (productos ==
+                                                            'SISTEMA EXCLUSA') {
+                                                          elementos =
+                                                              sistema_exclusa;
+                                                        } else {
+                                                          elementos = [];
+                                                        }
+                                                        setState(() {
+                                                          seleccion_elementos =
+                                                              productos;
+                                                          seleccion_respuestos =
+                                                              null;
+                                                        });
+                                                      },
+                                                      
+                                                      elevation: 8,
+                                                      style:
+                                                          TextStyle(fontSize: 12),
+                                                      iconEnabledColor:
+                                                          Colors.green,
+                                                        
+                                                    ),
                                                   ),
                                                 ),
-                                              ),
+                                              
                                             ],
                                           ),
                                         ],
@@ -894,40 +895,40 @@ class EditableTextState extends State<EstiloFormulario> {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              SizedBox(
-                                                width: MediaQuery.of(context)
-                                                        .size
-                                                        .width *
-                                                    1.0,
-                                                height: 40,
-                                                child:
-                                                    DropdownButtonHideUnderline(
-                                                  child: DropdownButton<String>(
-                                                    hint: Text("Seleccione"),
-                                                    value: seleccion_respuestos,
-                                                    items: elementos
-                                                        .map((String value) {
-                                                      return DropdownMenuItem<
-                                                          String>(
-                                                        value: value,
-                                                        child: Text(value),
-                                                      );
-                                                    }).toList(),
-                                                    onChanged: (repuestos) {
-                                                      Preferences.replacement = repuestos!;
-                                                      setState(() {
-                                                        seleccion_respuestos =
-                                                            repuestos;
-                                                      });
-                                                    },
-                                                    elevation: 8,
-                                                    style:
-                                                        TextStyle(fontSize: 12),
-                                                    iconEnabledColor:
-                                                        Colors.green,
+                                            
+                                                SizedBox(
+                                                  width: null,
+                                                  height: 40,                                             
+                                                  child:
+                                                      DropdownButtonHideUnderline(
+                                                    child: DropdownButton<String>(
+                                                      hint: Text("Seleccione"),                                                 
+                                                      value: seleccion_respuestos,
+                                                      items: elementos
+                                                          .map((String value) {
+                                                        return DropdownMenuItem<
+                                                            String>(
+                                                          value: value,
+                                                          child: Text(value),
+                                                        
+                                                        );
+                                                      }).toList(),
+                                                      onChanged: (repuestos) {
+                                                        Preferences.replacement = repuestos!;
+                                                        setState(() {
+                                                          seleccion_respuestos =
+                                                              repuestos;
+                                                        });
+                                                      },
+                                                      elevation: 8,
+                                                      style:
+                                                          TextStyle(fontSize: 12),
+                                                      iconEnabledColor:
+                                                          Colors.green,
+                                                    ),
                                                   ),
                                                 ),
-                                              ),
+                                              
                                             ],
                                           ),
                                         ],
@@ -1109,10 +1110,8 @@ class EditableTextState extends State<EstiloFormulario> {
                                   ),
                                 ),
                               ),
-                              Card(
-                                  elevation: 10,
-                                  shadowColor: Colors.black,
-                                  child: Padding(
+                              
+                                  Padding(
                                     padding: const EdgeInsets.symmetric(
                                         vertical: 10.0, horizontal: 100.0),
                                     child: Column(
@@ -1120,24 +1119,35 @@ class EditableTextState extends State<EstiloFormulario> {
                                       children: [
                                         
                                             ElevatedButton(
-                                              child: const Text('GUARDAR DATOS'),
-                                              style: ButtonStyle(
-                                                backgroundColor:
-                                                    MaterialStateProperty.all(
-                                                        Color.fromARGB(
-                                                            255, 77, 190, 43)),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(vertical:10),
+                                          child: Row(
+                                            children: [
+                                              Icon(
+                                                Icons.save_sharp,
+                                                size: 20,
                                               ),
-                                              onPressed: () {
-                                                if (_formKey.currentState!
-                                                .validate());
-                                              },
-                                            ),
+                                              Text("GUARDAR DATOS"),
+                                            ],
+                                          ),
+                                        ),
+                                        style: ButtonStyle(
+                                          backgroundColor:
+                                              MaterialStateProperty.all(
+                                                  Color.fromARGB(
+                                                      255, 77, 190, 43)),
+                                        ),
+                                        onPressed: () {
+                                          if (_formKey.currentState!.validate())
+                                            ;
+                                        },
+                                      ),
                                           ],
                                         
                                       
                                     ),
                                   ),
-                                ),
+                                
                               
                             ],
                           ),
